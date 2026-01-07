@@ -28,7 +28,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'vinaykagithapu', // Usually your GitHub org/user name.
-  projectName: 'vinay.github.io', // Usually your repo name.
+  projectName: 'vinaykagithapu.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
@@ -50,7 +50,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-            'https://github.com/vinaykagithapu/vinay.github.io/tree/main/',
+            'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -59,7 +59,7 @@ const config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/vinaykagithapu/vinay.github.io/tree/main/',
+            'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
