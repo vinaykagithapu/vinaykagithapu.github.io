@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[672],{3024(a){a.exports=JSON.parse('{"authors":[{"name":"Vinay Kagithapu","title":"DevOps Engineer | LLM Infrastructure","url":"https://github.com/vinaykagithapu","imageURL":"https://github.com/vinaykagithapu.png","key":"vinay","page":null,"count":1}]}')}}]);

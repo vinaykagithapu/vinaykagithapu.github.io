@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[215],{7646(o){o.exports=JSON.parse('{"tags":[{"label":"devops","permalink":"/blog/tags/devops","count":1},{"label":"portfolio","permalink":"/blog/tags/portfolio","count":1},{"label":"github-pages","permalink":"/blog/tags/github-pages","count":1}]}')}}]);

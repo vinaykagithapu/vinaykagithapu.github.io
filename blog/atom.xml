@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://vinay.github.io/blog/</id>
+    <title>Vinay Kagithapu Blog</title>
+    <updated>2026-01-07T16:22:11.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://vinay.github.io/blog/"/>
+    <subtitle>Vinay Kagithapu Blog</subtitle>
+    <icon>https://vinay.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Why Every DevOps Engineer Needs a Portfolio Website]]></title>
+        <id>https://vinay.github.io/blog/portfolio-launch/</id>
+        <link href="https://vinay.github.io/blog/portfolio-launch/"/>
+        <updated>2026-01-07T16:22:11.000Z</updated>
+        <summary type="html"><![CDATA[A resume shows what you did.]]></summary>
+        <content type="html"><![CDATA[<p>A resume shows <strong>what</strong> you did.
+A portfolio shows <strong>how well</strong> you did it.</p>
+<p>In this post, I explain why every DevOps engineer should maintain a
+public portfolio and blog.</p>]]></content>
+        <author>
+            <name>Vinay Kagithapu</name>
+            <uri>https://github.com/vinaykagithapu</uri>
+        </author>
+        <category label="devops" term="devops"/>
+        <category label="portfolio" term="portfolio"/>
+        <category label="github-pages" term="github-pages"/>
+    </entry>
+</feed>
