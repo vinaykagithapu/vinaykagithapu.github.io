@@ -154,7 +154,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Vinay Kagithapu. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Vinay Kagithapu.`,
       },
       prism: {
         theme: prismThemes.github,
