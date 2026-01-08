@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://vinaykagithapu.github.io/blog/"/>
     <subtitle>Vinay Kagithapu Blog</subtitle>
-    <icon>https://vinaykagithapu.github.io/img/favicon.ico</icon>
+    <icon>https://vinaykagithapu.github.io/img/favicon.svg</icon>
     <entry>
         <title type="html"><![CDATA[Why Every DevOps Engineer Needs a Portfolio Website]]></title>
         <id>https://vinaykagithapu.github.io/blog/portfolio-launch/</id>

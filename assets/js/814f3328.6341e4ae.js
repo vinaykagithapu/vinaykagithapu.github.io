@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Why Every DevOps Engineer Needs a Portfolio Website","permalink":"/blog/portfolio-launch","unlisted":false,"date":"2026-01-07T16:22:11.000Z"}]}')}}]);
