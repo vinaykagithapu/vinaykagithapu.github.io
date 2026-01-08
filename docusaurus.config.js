@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Vinay Kagithapu',
   tagline: 'Engineer | LLM Infrastructure | Kubernetes | DevSecOps',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -75,8 +75,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.svg',
       colorMode: {
         respectPrefersColorScheme: true,
       },
@@ -94,7 +93,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Tutorials',
           },
           {
             href: 'https://github.com/vinaykagithapu',
@@ -145,7 +144,7 @@ const config = {
             title: 'Resources',
             items: [
               {
-                label: 'Documentation',
+                label: 'Tutorials',
                 to: '/docs/intro',
               },
               {
