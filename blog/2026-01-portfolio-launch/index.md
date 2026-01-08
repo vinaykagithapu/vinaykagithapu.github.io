@@ -3,6 +3,7 @@ slug: portfolio-launch
 title: Why Every DevOps Engineer Needs a Portfolio Website
 authors: [vinay]
 tags: [devops, portfolio, github-pages]
+unlisted: true
 ---
 
 A resume shows **what** you did.
