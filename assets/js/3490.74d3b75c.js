@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[3490],{3490(o,a,i){i.d(a,{createInfoServices:()=>e.v});var e=i(1885);i(7960)}}]);
