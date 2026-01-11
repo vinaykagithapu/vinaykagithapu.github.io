@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: "Getting Started"
+description: "An introduction to MLOps - bridging the gap between Machine Learning and Operations"
 ---
 
 # Getting Started with MLOps
