@@ -1,0 +1,8 @@
+{
+  "label": "OpenCode Guide",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "OpenCode from zero: what it is, why it matters, how to set it up, its core concepts, current features, and real-world use cases."
+  }
+}
