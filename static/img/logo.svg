@@ -6,5 +6,11 @@
     </linearGradient>
   </defs>
   <rect width="100" height="100" rx="22" ry="22" fill="url(#bgGradient)"/>
-  <text x="50" y="69" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="46" font-weight="800" letter-spacing="-2" fill="#ffffff" text-anchor="middle">VK</text>
+  <!-- VK letterforms as pure vector strokes (no font dependency) -->
+  <g fill="none" stroke="#ffffff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 33 L34 67 L44 33"/>
+    <path d="M57 33 V67"/>
+    <path d="M74 34 L59.5 50"/>
+    <path d="M59.5 50 L74 66"/>
+  </g>
 </svg>

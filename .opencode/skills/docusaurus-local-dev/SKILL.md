@@ -80,7 +80,7 @@ Where to change what:
 | Hero: mesh bg, avatar ring, status chip, tech chips | `src/pages/index.js` + `index.module.css` |
 | Homepage feature cards (SVG icons, no emoji) | `src/components/HomepageFeatures/` |
 | Projects card grid | `src/pages/projects.js` (data in `ProjectList` array) + `projects.module.css` |
-| Brand assets: `logo.svg`, `favicon.svg` (SVG gradient `#22d3ee→#6366f1`), `favicon.ico` (PNG-in-ICO), `social-card.png` (og:image) | `static/img/` — social scrapers need raster, so `themeConfig.image` must point at `social-card.png`, never an SVG. Regenerate the raster pair with a Playwright script (render SVG 32×32 `omitBackground` + 1200×630 HTML card; wrap PNG bytes in ICO header via Python — no ImageMagick here). |
+| Brand assets: `logo.svg`, `favicon.svg` (SVG gradient `#22d3ee→#6366f1`), `favicon.ico` (PNG-in-ICO), `social-card.png` (og:image) | `static/img/` — VK letterforms are **pure vector strokes, no `<text>`** (edit the `<g>` path data in both SVGs; they share a 100×100 viewBox). Social scrapers need raster, so `themeConfig.image` must point at `social-card.png`, never an SVG. Regenerate the raster pair with a Playwright script (render SVG 32×32 `omitBackground` + 1200×630 HTML card; wrap PNG bytes in ICO header via Python — no ImageMagick here). Unused Docusaurus template images were deleted; keep `static/img/` limited to these four files + your own assets. |
 
 Gotchas discovered while styling (Infima quirks):
 
