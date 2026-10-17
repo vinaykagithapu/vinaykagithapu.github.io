@@ -61,7 +61,53 @@ opening the browser.
 
 - `docs/` — tutorials (mlops, devops, devsecops, security), sidebar in `sidebars.js`
 - `blog/` — posts under `YYYY-MM-DD-slug/index.md`, authors in `blog/authors.yml`
-- `src/pages/` — standalone pages (`about`, `projects`, `markdown-page`)
-- `src/css/custom.css` — theme customization
+- `src/pages/` — standalone pages (`about`, `projects.js` card grid, `markdown-page`)
+- `src/css/custom.css` — **entire theme design system** (see below)
 - `docusaurus.config.js` — site config: dark default theme, baseUrl `/`,
   trailingSlash true, deployment to gh-pages via `npm run deploy`
+
+## Design system (2026 refresh, branch `feature/site-design-refresh`)
+
+Dark-first "cloud native" theme: deep slate surfaces (#0a0f1a bg / #0f172a
+surface), cyan→indigo gradient accents, Inter Variable typography.
+
+Where to change what:
+
+| Thing | Where |
+| --- | --- |
+| Colors, typography, buttons, cards, blog cards, footer, navbar, scrollbar | `src/css/custom.css` (Infima `:root` + `[data-theme='dark']` vars, then component overrides) |
+| Brand gradient | `--site-gradient` / `--site-gradient-soft` in `custom.css` |
+| Hero: mesh bg, avatar ring, status chip, tech chips | `src/pages/index.js` + `index.module.css` |
+| Homepage feature cards (SVG icons, no emoji) | `src/components/HomepageFeatures/` |
+| Projects card grid | `src/pages/projects.js` (data in `ProjectList` array) + `projects.module.css` |
+
+Gotchas discovered while styling (Infima quirks):
+
+- `.footer--dark` declares `--ifm-footer-background-color` **on the element**;
+  override it with a `.footer--dark { ... }` rule, not just `:root`.
+- `.button.button--secondary` (two classes) beats `.button--secondary` —
+  match the doubled selector for color overrides.
+- Blog list items are `<article class="margin-bottom--xl">` with CSS-module
+  hashed title classes; target `.blog-wrapper article` / `[class*='...']`,
+  never the hash (`title_f1Hy` changes between versions).
+- `custom.css` loads after Infima, so equal-specificity overrides win.
+
+## Visual verification with Playwright
+
+A screenshot script lives at `/tmp/opencode/shoot.js` (recreate if missing):
+it captures 9 key pages at 1440×900 full-page into `/tmp/opencode/shots/`.
+
+```sh
+# Playwright is in the npx cache, not local deps:
+NODE_PATH=/home/vinay/.npm/_npx/705bc6b22212b352/node_modules node /tmp/opencode/shoot.js <label>
+NODE_PATH=/home/vinay/.npm/_npx/705bc6b22212b352/node_modules node /tmp/opencode/shoot.js <label>-light light
+```
+
+(The `light` arg sets `localStorage.theme=light` before load; it shoots
+home/blog/docs only.) If NODE_PATH resolution fails, run
+`npx playwright --version` first or `npm i -D playwright` in a scratch dir.
+Browsers are cached at `~/.cache/ms-playwright`.
+
+Workflow: rebuild (`npm run build`) → screenshot → `read` the PNGs to
+review design changes. `docusaurus serve` picks up the new `build/`
+output without a restart.
