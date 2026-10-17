@@ -33,21 +33,21 @@ Each skill is a folder with a `SKILL.md` that must start with YAML frontmatter �
 
 ```markdown
 ---
-name: site-publish
-description: Open a PR, merge to main, deploy, and verify the live site
+name: release-publish
+description: Ship a change to a verified production release
 ---
 
 ## Repo facts
-- default branch: main · deploy branch: gh-pages
+- default branch: main · test command: npm test
 
 ## Workflow
 1. branch → commit → push
-2. open PR via GitHub API, wait for CI
-3. merge, then npm run deploy
-4. curl the live site to confirm
+2. open PR, wait for CI
+3. merge after approval
+4. deploy, then verify production
 ```
 
-Keep each skill **small and sharp**. One skill per repeated workflow — `local-dev`, `site-publish`, `db-migrate` — beats one giant "everything" skill. Two rules of thumb:
+Keep each skill **small and sharp**. One skill per repeated workflow — `local-dev`, `release-publish`, `secret-scan` — beats one giant "everything" skill. Two rules of thumb:
 
 1. **Commands verbatim** — exact build/serve/deploy commands, including any required environment variables. Agents copy-paste; give them the right thing to copy.
 2. **Gotchas belong in the skill** — the weird crash you already solved once? Write it down. The agent shouldn't rediscover it, and neither should you.
@@ -94,5 +94,7 @@ GIT_USER=your-github-username
 ## Getting started
 
 You don't need to automate everything on day one. Start with **the one task you've explained to your agent more than twice** — usually local dev setup or your deploy flow. Write it as a skill, run the loop on a real change, and add the gotchas you hit. Within a week your repository will carry a complete, reviewable playbook of how it's built, shipped, and verified — and your agent will finally know it too.
+
+If you'd rather not start from zero, I maintain **[opencode-skills](https://github.com/vinaykagithapu/opencode-skills)** — a small MIT-licensed starter pack of four generic skills (`local-dev`, `release-publish`, `visual-verify`, `secret-scan`) you can copy into any repo and customize.
 
 OpenCode is free and open source — the [docs](https://opencode.ai/docs/) cover agents, skills, MCP servers, and the SDK. If you automate your workflow, automate the verification too. That's the part that lets you sleep at night.
