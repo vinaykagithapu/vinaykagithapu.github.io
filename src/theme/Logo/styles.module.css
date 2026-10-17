@@ -1,0 +1,14 @@
+/* Brand link: gradient underline that grows in only on the homepage.
+   Padding-bottom is constant so there is no layout shift between pages. */
+.brandLink {
+  background-image: var(--site-gradient);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0 2px;
+  padding-bottom: 5px;
+  transition: background-size 0.2s ease;
+}
+
+.brandLinkActive {
+  background-size: 100% 2px;
+}
