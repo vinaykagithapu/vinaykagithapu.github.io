@@ -8,15 +8,15 @@ const ProjectList = [
   {
     title: 'OpenCode Agent Skills',
     description:
-      'Reusable, project-scoped skills that turn an AI coding agent into a reliable collaborator — local dev, publishing, and automation workflows stored as plain markdown, versioned with the repo they serve.',
+      'An MIT-licensed starter pack of general-purpose agent skills for OpenCode — local dev, verified releases, visual UI checks, and secret hygiene. Copy any skill into a repo and the agent picks it up.',
     tech: ['OpenCode', 'AI Agents', 'Automation', 'Playwright', 'Git'],
     features: [
-      'Skill system for repo-specific agent context — docs the agent actually reads',
-      'Closed shipping loop: branch → build → verify → PR → merge → deploy → live-check',
-      'Playwright screenshots + production curl greps as verification gates',
-      'Security-first: gitignored secrets, placeholder-only .env.example',
+      'Four copy-paste skills: local-dev, release-publish, visual-verify, secret-scan',
+      'Built on the Agent Skills spec — name + description frontmatter, auto-discovered',
+      'Verification-first: every workflow ends with proof, not promises',
+      'Intentionally generic — add your project’s real commands and ship',
     ],
-    repo: 'https://github.com/vinaykagithapu/vinaykagithapu.github.io',
+    repo: 'https://github.com/vinaykagithapu/opencode-skills',
   },
   {
     title: 'Sentiment Analysis Web App',
