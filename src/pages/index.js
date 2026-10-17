@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <Layout
       title="Home"
-      description="Vinay Kagithapu - DevOps Engineer specializing in LLM Infrastructure, Kubernetes, and DevSecOps">
+      description="Vinay Kagithapu - AI Infrastructure & Platform Engineer. Building, securing and scaling AI/LLM platforms with Kubernetes and DevSecOps">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

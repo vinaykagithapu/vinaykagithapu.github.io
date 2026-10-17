@@ -4,7 +4,7 @@ title: About Me
 
 # Hi, I'm Vinay 👋
 
-**DevOps & Platform Engineer** with **5+ years of experience** building secure, scalable AI platforms in cloud-native environments.
+**AI Infrastructure & Platform Engineer** with **5+ years of experience** building secure, scalable, and high-performance platforms for AI and LLM workloads in cloud-native environments.
 
 ---
 

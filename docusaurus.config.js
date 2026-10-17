@@ -16,7 +16,7 @@ const config = {
   },
   themes: ['@docusaurus/theme-mermaid'],
   title: 'Vinay Kagithapu',
-  tagline: 'Engineer | LLM Infrastructure | Kubernetes | DevSecOps',
+  tagline: 'AI Infrastructure & Platform Engineer | LLM Systems | Kubernetes | DevSecOps',
   favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
