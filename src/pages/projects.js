@@ -6,17 +6,17 @@ import styles from './projects.module.css';
 
 const ProjectList = [
   {
-    title: 'OpenCode Agent Skills',
+    title: 'OpenCode Guide',
     description:
-      'An MIT-licensed starter pack of general-purpose agent skills for OpenCode — local dev, verified releases, visual UI checks, and secret hygiene. Copy any skill into a repo and the agent picks it up.',
+      'OpenCode from zero to power user — what it is, setup, core concepts, features, updates, and real-world use cases, plus an MIT-licensed skills starter pack for any repository.',
     tech: ['OpenCode', 'AI Agents', 'Automation', 'Playwright', 'Git'],
     features: [
-      'Four copy-paste skills: local-dev, release-publish, visual-verify, secret-scan',
-      'Built on the Agent Skills spec — name + description frontmatter, auto-discovered',
-      'Verification-first: every workflow ends with proof, not promises',
-      'Intentionally generic — add your project’s real commands and ship',
+      'Complete guide: what → setup → concepts → features → use cases',
+      'Four copy-paste agent skills: local-dev, release-publish, visual-verify, secret-scan',
+      'Verification-first workflows — every loop ends with proof, not promises',
+      'Intentionally generic — works with any repo, MIT licensed',
     ],
-    repo: 'https://github.com/vinaykagithapu/opencode-skills',
+    repo: 'https://github.com/vinaykagithapu/opencode-guide',
   },
   {
     title: 'Sentiment Analysis Web App',

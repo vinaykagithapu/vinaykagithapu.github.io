@@ -7,6 +7,10 @@ tags: [opencode, ai-agent, devops]
 
 **OpenCode** is an open-source AI coding agent that lives in your terminal. It reads your repository, edits files, runs commands, opens pull requests — and works with almost any model provider, so you're never locked into one vendor. But the difference between an AI agent that *demos well* and one you can **trust with real work** comes down to three things: repo-specific context, a verified workflow, and security discipline. This post is a practical guide to all three, and everything here applies to **any project** — a static site, a service, an infrastructure repo.
 
+:::info New to OpenCode?
+This is the skills deep dive. For the full picture — what OpenCode is, setup, core concepts, features, and use cases — start with the **[OpenCode Guide](/docs/opencode/what-is-opencode)**.
+:::
+
 <!-- truncate -->
 
 ## Why skills change everything
@@ -95,6 +99,6 @@ GIT_USER=your-github-username
 
 You don't need to automate everything on day one. Start with **the one task you've explained to your agent more than twice** — usually local dev setup or your deploy flow. Write it as a skill, run the loop on a real change, and add the gotchas you hit. Within a week your repository will carry a complete, reviewable playbook of how it's built, shipped, and verified — and your agent will finally know it too.
 
-If you'd rather not start from zero, I maintain **[opencode-skills](https://github.com/vinaykagithapu/opencode-skills)** — a small MIT-licensed starter pack of four generic skills (`local-dev`, `release-publish`, `visual-verify`, `secret-scan`) you can copy into any repo and customize.
+If you'd rather not start from zero, I maintain **[opencode-guide](https://github.com/vinaykagithapu/opencode-guide)** — a complete OpenCode resource (setup, concepts, features, use cases) with a small MIT-licensed starter pack of four generic skills (`local-dev`, `release-publish`, `visual-verify`, `secret-scan`) you can copy into any repo and customize.
 
 OpenCode is free and open source — the [docs](https://opencode.ai/docs/) cover agents, skills, MCP servers, and the SDK. If you automate your workflow, automate the verification too. That's the part that lets you sleep at night.

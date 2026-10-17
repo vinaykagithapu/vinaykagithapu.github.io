@@ -1,6 +1,6 @@
 {
   "label": "DevOps",
-  "position": 3,
+  "position": 4,
   "link": {
     "type": "generated-index",
     "description": "Master CI/CD pipelines, infrastructure as code, Docker, and Kubernetes."
