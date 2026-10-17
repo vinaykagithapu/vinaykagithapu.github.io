@@ -10,7 +10,7 @@ title: About Me
 
 ## Current Role
 
-**DevOps Lead** at a stealth AI startup, where I'm responsible for:
+**Senior Engineer** at a stealth AI startup, where I'm responsible for:
 
 - **LLM Infrastructure** — Deployed and scaled production LLM workloads on Kubernetes using **vLLM**, **TensorRT-LLM**, and **SGLang**
 - **Performance Optimization** — Eliminated infrastructure bottlenecks (PVC latency, RDMA, and network issues) to significantly improve inference performance

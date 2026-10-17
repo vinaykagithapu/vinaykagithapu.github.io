@@ -21,7 +21,7 @@ function StatusChip() {
   return (
     <span className={styles.statusChip}>
       <span className={styles.statusDot} aria-hidden="true" />
-      <code>DevOps Lead @ stealth AI startup</code>
+      <code>Senior Engineer @ stealth AI startup</code>
     </span>
   );
 }
