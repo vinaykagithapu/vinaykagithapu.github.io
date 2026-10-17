@@ -6,6 +6,19 @@ import styles from './projects.module.css';
 
 const ProjectList = [
   {
+    title: 'OpenCode Agent Skills',
+    description:
+      'Reusable, project-scoped skills that turn an AI coding agent into a reliable collaborator — local dev, publishing, and automation workflows stored as plain markdown, versioned with the repo they serve.',
+    tech: ['OpenCode', 'AI Agents', 'Automation', 'Playwright', 'Git'],
+    features: [
+      'Skill system for repo-specific agent context — docs the agent actually reads',
+      'Closed shipping loop: branch → build → verify → PR → merge → deploy → live-check',
+      'Playwright screenshots + production curl greps as verification gates',
+      'Security-first: gitignored secrets, placeholder-only .env.example',
+    ],
+    repo: 'https://github.com/vinaykagithapu/vinaykagithapu.github.io',
+  },
+  {
     title: 'Sentiment Analysis Web App',
     description:
       'AI-powered sentiment analysis tool that classifies text as Positive, Negative, or Neutral using pre-trained HuggingFace Transformer models, with real-time predictions and confidence scores.',
