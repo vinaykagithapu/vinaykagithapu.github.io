@@ -65,6 +65,11 @@ opening the browser.
 - `src/css/custom.css` — **entire theme design system** (see below)
 - `docusaurus.config.js` — site config: dark default theme, baseUrl `/`,
   trailingSlash true, deployment to gh-pages via `npm run deploy`
+- `src/theme/Logo/index.js` + `styles.module.css` — swizzled override of the
+  navbar brand: adds `aria-label="Vinay Kagithapu — home"` (a11y) + a
+  homepage-only gradient underline (`brandLinkActive`). On major Docusaurus
+  upgrades, diff against upstream
+  `@docusaurus/theme-classic/src/theme/Logo/index.tsx`.
 
 ## Design system (2026 refresh, branch `feature/site-design-refresh`)
 
