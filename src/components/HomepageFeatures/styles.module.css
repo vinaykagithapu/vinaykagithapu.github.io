@@ -1,12 +1,53 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  padding: 3.5rem 0 4.5rem;
 }
 
-.featureEmoji {
-  font-size: 4rem;
-  display: block;
-  margin-bottom: 1rem;
+.featureCard {
+  height: 100%;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--ifm-card-border-radius);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--site-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--site-card-shadow-hover);
+  border-color: var(--ifm-color-primary-darkest);
+}
+
+.iconTile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.1rem;
+  border-radius: 0.75rem;
+  background: var(--site-gradient);
+  color: #fff;
+  box-shadow: 0 6px 18px -8px rgba(34, 211, 238, 0.6);
+}
+
+[data-theme='dark'] .iconTile {
+  color: #06121f;
+}
+
+.iconTile svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.featureTitle {
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.featureText {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
 }

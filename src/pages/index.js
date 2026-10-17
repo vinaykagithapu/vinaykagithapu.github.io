@@ -8,38 +8,68 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 import profilePhoto from './pp2.png';
 
+const TechChips = [
+  'Kubernetes',
+  'vLLM',
+  'Terraform',
+  'Prometheus',
+  'Grafana',
+  'GitOps',
+];
+
+function StatusChip() {
+  return (
+    <span className={styles.statusChip}>
+      <span className={styles.statusDot} aria-hidden="true" />
+      <code>DevOps Lead @ stealth AI startup</code>
+    </span>
+  );
+}
+
+function TechRow() {
+  return (
+    <div className={styles.techRow} aria-label="Core technologies">
+      {TechChips.map((tech) => (
+        <span key={tech} className={styles.techChip}>
+          {tech}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={styles.heroBanner}>
+      <div className={styles.heroMesh} aria-hidden="true" />
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.profileSection}>
             <div className={styles.profileImageWrapper}>
-              <img 
-                src={profilePhoto} 
-                alt="Vinay Kagithapu" 
+              <img
+                src={profilePhoto}
+                alt="Vinay Kagithapu"
                 className={styles.profileImage}
               />
-              <div className={styles.profileGlow}></div>
             </div>
           </div>
           <div className={styles.textSection}>
-            <Heading as="h1" className="hero__title">
-              {siteConfig.title}
+            <StatusChip />
+            <Heading as="h1" className={styles.heroTitle}>
+              Vinay <span className="site-gradient-text">Kagithapu</span>
             </Heading>
-            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
+            <TechRow />
             <div className={styles.buttons}>
-              <Link
-                className="button button--secondary button--lg"
-                to="/about">
-                About Me →
-              </Link>
-              <Link
-                className="button button--outline button--secondary button--lg"
-                style={{marginLeft: '1rem'}}
-                to="/projects">
+              <Link className="button button--primary button--lg" to="/projects">
                 View Projects
+              </Link>
+              <Link className="button button--secondary button--lg" to="/about">
+                About Me
+              </Link>
+              <Link className="button button--secondary button--lg" to="/docs/intro">
+                Tutorials
               </Link>
             </div>
           </div>
@@ -50,7 +80,6 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
       title="Home"

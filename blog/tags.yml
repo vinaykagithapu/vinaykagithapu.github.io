@@ -92,3 +92,13 @@ security:
   label: Security
   permalink: /security
   description: DevSecOps, security policies, and runtime protection
+
+chatbot:
+  label: Chatbot
+  permalink: /chatbot
+  description: Conversational assistants and chatbot implementations
+
+conversational-ai:
+  label: Conversational AI
+  permalink: /conversational-ai
+  description: Conversational AI systems, dialog flow, and assistant UX
