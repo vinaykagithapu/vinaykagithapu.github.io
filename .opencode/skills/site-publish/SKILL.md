@@ -60,6 +60,20 @@ Env-var gotchas (all verified the hard way):
   yarn.lock + missing yarn crashes the CLI otherwise).
 - Deploy = fresh `docusaurus build` + clone gh-pages + force-push. Success
   ends with "Website is live at https://vinaykagithapu.github.io/."
+- **If `npm run deploy` hangs/times out** (happened once — no output for 10min,
+  remote gh-pages untouched): deploy manually. Same result, fully deterministic:
+
+```sh
+NO_UPDATE_NOTIFIER=1 npm run build           # 1. fresh build (verify new content in build/)
+git worktree add --detach /tmp/gh origin/gh-pages
+git -C /tmp/gh checkout -q -B gh-pages origin/gh-pages
+rsync -a --delete --exclude .git build/ /tmp/gh/   # 2. .nojekyll comes along
+git -C /tmp/gh add -A
+git -C /tmp/gh -c user.name="Vinay Kagithapu" -c user.email="…" \
+    commit -m "Deploy website - based on $(git rev-parse HEAD)"
+git -C /tmp/gh push origin gh-pages         # 3. plain push, no force needed
+git worktree remove --force /tmp/gh
+```
 
 ## 3. Post-deploy verification
 
