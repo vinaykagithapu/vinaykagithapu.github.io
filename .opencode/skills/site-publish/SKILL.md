@@ -77,5 +77,8 @@ A new hashed `styles.*.css` filename = the fresh build is live.
 
 - Remote: `origin` = github.com/vinaykagithapu/vinaykagithapu.github.io (HTTPS, credentialed push works)
 - Default branch `main`; deploy branch `gh-pages` (force-pushed by deploy)
+- **`.env.example`** at repo root samples every env var used here (GITHUB_TOKEN*,
+  GIT_USER*, NO_UPDATE_NOTIFIER) — copy to `.env` (gitignored) and fill in.
+  Never commit real values; keys only in commits/docs.
 - Git identity is configured **repo-locally** (Vinay Kagithapu) — global config absent
 - Open PRs: `https://github.com/<owner>/<repo>/compare/<branch>...main`
