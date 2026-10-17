@@ -102,3 +102,8 @@ conversational-ai:
   label: Conversational AI
   permalink: /conversational-ai
   description: Conversational AI systems, dialog flow, and assistant UX
+
+opencode:
+  label: OpenCode
+  permalink: /opencode
+  description: OpenCode — open-source AI coding agents, skills, and agentic developer workflows

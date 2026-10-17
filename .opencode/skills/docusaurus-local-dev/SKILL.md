@@ -51,7 +51,11 @@ opening the browser.
   any broken internal link. Fix links before assuming a content error.
 - **Blog tags must be declared**: undeclared frontmatter tags produce build
   warnings; define them in `blog/tags.yml` (e.g. `chatbot`, `conversational-ai`
-  were missing from a 2026-02-01 post).
+  were missing from a 2026-02-01 post). Tag `permalink:` in `tags.yml` is a
+  **suffix** — tag pages build at `/blog/tags/<permalink>/`, not `/<permalink>/`.
+- **Blog frontmatter YAML: quote titles containing colons** — `title: Foo: Bar`
+  breaks gray-matter ("Error while parsing Markdown front matter"); use
+  `title: "Foo: Bar"` (build fails hard, easy to spot).
 - **Mermaid is enabled** site-wide (`@docusaurus/theme-mermaid`,
   `markdown.mermaid: true`), so fenced ```mermaid blocks render as diagrams.
 - Deps install may warn about `core-js` postinstall scripts not in
