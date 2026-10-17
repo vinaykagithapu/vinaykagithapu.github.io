@@ -787,9 +787,9 @@ CNCF projects reduce lock-in, but managed services (EKS/GKE) still embed some. U
 <p>While it requires more setup than cloud-based alternatives, the trade-off is complete control over your data, unlimited customization, and the ability to automate virtually any task on your computer through natural language.</p>]]></content:encoded>
             <category>AI</category>
             <category>AI Agent</category>
-            <category>chatbot</category>
+            <category>Chatbot</category>
             <category>LLM</category>
-            <category>conversational-ai</category>
+            <category>Conversational AI</category>
             <category>NLP</category>
             <category>Python</category>
             <category>Machine Learning</category>

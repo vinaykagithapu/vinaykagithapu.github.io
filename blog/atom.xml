@@ -802,9 +802,9 @@ CNCF projects reduce lock-in, but managed services (EKS/GKE) still embed some. U
         </author>
         <category label="AI" term="AI"/>
         <category label="AI Agent" term="AI Agent"/>
-        <category label="chatbot" term="chatbot"/>
+        <category label="Chatbot" term="Chatbot"/>
         <category label="LLM" term="LLM"/>
-        <category label="conversational-ai" term="conversational-ai"/>
+        <category label="Conversational AI" term="Conversational AI"/>
         <category label="NLP" term="NLP"/>
         <category label="Python" term="Python"/>
         <category label="Machine Learning" term="Machine Learning"/>

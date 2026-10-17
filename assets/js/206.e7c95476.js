@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[206],{206(e,i,a){a.d(i,{createTreeViewServices:()=>o.I});var o=a(2275);a(1400)}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[8488],{8488(e,i,a){a.d(i,{createArchitectureServices:()=>o.S});var o=a(9221);a(1400)}}]);

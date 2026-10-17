@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[4229],{4229(i,a,e){e.d(a,{createCynefinServices:()=>o.t});var o=e(3486);e(1400)}}]);
