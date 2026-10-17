@@ -1,0 +1,101 @@
+.wrapper {
+  max-width: 56rem;
+  padding: 3rem 1.25rem 4.5rem;
+}
+
+.header {
+  margin-bottom: 2.25rem;
+}
+
+.pageTitle {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.pageSubtitle {
+  color: var(--ifm-color-content-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.card {
+  padding: 1.75rem;
+  border-radius: var(--ifm-card-border-radius);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--site-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--site-card-shadow-hover);
+  border-color: var(--ifm-color-primary-darkest);
+}
+
+.cardTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+}
+
+.repoLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cardDescription {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.95rem;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.techChip {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--site-gradient-soft);
+  color: var(--ifm-color-content-secondary);
+  font-family: var(--ifm-font-family-code);
+}
+
+.featureList {
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary);
+  padding-left: 1.1rem;
+  margin-bottom: 0;
+}
+
+.featureList li {
+  margin-bottom: 0.35rem;
+}
+
+.featureList li::marker {
+  color: var(--ifm-color-primary);
+}

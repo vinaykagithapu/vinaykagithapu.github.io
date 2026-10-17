@@ -1,30 +1,370 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Site theme — "Cloud Native" design system
+ * Dark-first, deep slate surfaces with cyan→blue gradient accents.
+ * Light mode gets a clean white/sky treatment.
  */
 
-/* You can override the default Infima variables here. */
+@import '@fontsource-variable/inter';
+
+/* ------------------------------------------------------------------ */
+/* Infima variables — light mode                                       */
+/* ------------------------------------------------------------------ */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #0284c7;
+  --ifm-color-primary-dark: #0277b6;
+  --ifm-color-primary-darker: #0271ae;
+  --ifm-color-primary-darkest: #015d8f;
+  --ifm-color-primary-light: #0a90d7;
+  --ifm-color-primary-lighter: #1196df;
+  --ifm-color-primary-lightest: #2ba9ec;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8fafc;
+  --ifm-footer-background-color: #f1f5f9;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.85);
+  --ifm-navbar-height: 4rem;
+  --ifm-font-family-base: 'Inter Variable', system-ui, -apple-system,
+    'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-heading-letter-spacing: -0.02em;
+  --ifm-code-font-size: 92%;
+  --ifm-global-radius: 0.6rem;
+  --ifm-card-border-radius: 0.9rem;
+  --ifm-line-height-base: 1.7;
+
+  /* Brand gradient (buttons, highlights) */
+  --site-gradient: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  --site-gradient-soft: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(99, 102, 241, 0.12));
+  --site-card-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px -12px rgba(15, 23, 42, 0.12);
+  --site-card-shadow-hover: 0 2px 4px rgba(15, 23, 42, 0.08), 0 16px 40px -16px rgba(15, 23, 42, 0.22);
+  --docusaurus-highlighted-code-line-bg: rgba(2, 132, 199, 0.1);
+  --ifm-color-content-muted: #64748b;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ------------------------------------------------------------------ */
+/* Infima variables — dark mode (default)                              */
+/* ------------------------------------------------------------------ */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #38bdf8;
+  --ifm-color-primary-dark: #1eb0f5;
+  --ifm-color-primary-darker: #12a9f3;
+  --ifm-color-primary-darkest: #0288cc;
+  --ifm-color-primary-light: #52c8fa;
+  --ifm-color-primary-lighter: #5ecdfb;
+  --ifm-color-primary-lightest: #86ddfc;
+
+  --ifm-background-color: #0a0f1a;
+  --ifm-background-surface-color: #0f172a;
+  --ifm-footer-background-color: #0a0f1a;
+  --ifm-navbar-background-color: rgba(10, 15, 26, 0.8);
+  --ifm-font-color: #e2e8f0;
+  --ifm-color-content-secondary: #cbd5e1;
+  --ifm-color-content-muted: #94a3b8;
+  --ifm-global-radius: 0.6rem;
+  --ifm-color-emphasis-100: #1e293b;
+  --ifm-color-emphasis-200: #1e293b;
+  --ifm-color-emphasis-300: #334155;
+  --ifm-color-emphasis-400: #475569;
+  --ifm-toc-link-color: #94a3b8;
+  --ifm-code-background: #111c31;
+  --ifm-blockquote-color: #cbd5e1;
+
+  --site-gradient: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
+  --site-gradient-soft: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(99, 102, 241, 0.1));
+  --site-card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+  --site-card-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 40px -16px rgba(0, 0, 0, 0.7);
+  --docusaurus-highlighted-code-line-bg: rgba(56, 189, 248, 0.1);
+}
+
+/* ------------------------------------------------------------------ */
+/* Base polish                                                         */
+/* ------------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+h2 {
+  --ifm-h2-vertical-rhythm-top: 2;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+/* Gradient text helper */
+.site-gradient-text {
+  background: var(--site-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/* Navbar — frosted glass                                              */
+/* ------------------------------------------------------------------ */
+.navbar {
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  box-shadow: 0 1px 0 rgba(100, 116, 139, 0.15);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.navbar__logo img {
+  border-radius: 0.4rem;
+}
+
+.navbar__item {
+  font-weight: 500;
+}
+
+.navbar__link {
+  border-radius: 0.5rem;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  background: var(--site-gradient-soft);
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons — gradient primary, ghost secondary                         */
+/* ------------------------------------------------------------------ */
+.button {
+  --ifm-button-size: 2.75rem;
+  border-radius: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button--primary {
+  background: var(--site-gradient);
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 16px -6px rgba(34, 211, 238, 0.5);
+}
+
+.button--primary:hover {
+  color: #fff;
+  filter: brightness(1.08);
+  box-shadow: 0 6px 24px -6px rgba(99, 102, 241, 0.6);
+}
+
+[data-theme='dark'] .button--primary {
+  color: #06121f;
+}
+
+.button--secondary {
+  --ifm-button-background-color: transparent;
+  --ifm-button-border-color: var(--ifm-color-emphasis-300);
+}
+
+.button.button--secondary,
+.button.button--secondary:not(.button--outline):not(.button--active):not(:hover) {
+  color: var(--ifm-font-color-base);
+}
+
+.button.button--secondary:hover {
+  --ifm-button-background-color: var(--site-gradient-soft);
+  --ifm-button-border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+/* ------------------------------------------------------------------ */
+/* Cards — glassy surface + lift on hover                              */
+/* ------------------------------------------------------------------ */
+.card {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--site-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--site-card-shadow-hover);
+  border-color: var(--ifm-color-primary-darkest);
+}
+
+.card__header {
+  border-bottom-color: var(--ifm-color-emphasis-200);
+}
+
+/* ------------------------------------------------------------------ */
+/* Tables, admonitions, blockquotes, code                             */
+/* ------------------------------------------------------------------ */
+table {
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+th {
+  background: var(--site-gradient-soft);
+}
+
+thead tr {
+  background-color: transparent;
+}
+
+.admonition {
+  border-radius: 0.6rem;
+  box-shadow: none;
+}
+
+.theme-code-block-highlighted-line {
+  background-color: var(--docusaurus-highlighted-code-line-bg);
+}
+
+blockquote {
+  border-left-color: var(--ifm-color-primary);
+  background: var(--site-gradient-soft);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+code {
+  border-radius: 0.35rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Blog — card-like list items                                         */
+/* ------------------------------------------------------------------ */
+/* Docusaurus v3 markup: <article class="margin-bottom--xl"> with a
+   hashed title class, so target stable utilities/descendants instead. */
+.blog-wrapper article.margin-bottom--xl {
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--site-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.blog-wrapper article.margin-bottom--xl:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--site-card-shadow-hover);
+  border-color: var(--ifm-color-primary-darkest);
+}
+
+.blog-wrapper article h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.blog-wrapper article h2 a {
+  color: var(--ifm-font-color-base);
+}
+
+.blog-wrapper article h2 a:hover {
+  color: var(--ifm-color-primary);
+}
+
+.blog-tags {
+  gap: 0.4rem;
+}
+
+.blog-tags .badge {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* Blog sidebar headings (hashed class — match by substring) */
+.blog-wrapper [class*='sidebarItemTitle'] {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ifm-color-content-muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* Table of contents                                                   */
+/* ------------------------------------------------------------------ */
+.table-of-contents {
+  border-left: 2px solid var(--ifm-color-emphasis-200);
+  font-size: 0.85rem;
+}
+
+.table-of-contents .table-of-contents__link--active {
+  border-left: 2px solid var(--ifm-color-primary);
+  margin-left: -2px;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ */
+/* Footer — blends with page background                                */
+/* ------------------------------------------------------------------ */
+/* Infima's .footer--dark declares the color on the element itself,
+   so a descendant-scoped override is required. */
+.footer--dark {
+  --ifm-footer-background-color: var(--ifm-background-color);
+  --ifm-footer-link-color: var(--ifm-color-content-secondary);
+}
+
+.footer {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 2.5rem;
+}
+
+.footer__title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ifm-color-content-muted);
+}
+
+.footer__link-item {
+  color: var(--ifm-color-content-secondary);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* ------------------------------------------------------------------ */
+/* Scrollbar (webkit)                                                  */
+/* ------------------------------------------------------------------ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ifm-color-emphasis-400) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-emphasis-400);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ifm-color-content-muted);
 }
