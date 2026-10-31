@@ -107,3 +107,8 @@ opencode:
   label: OpenCode
   permalink: /opencode
   description: OpenCode — open-source AI coding agents, skills, and agentic developer workflows
+
+openrouter:
+  label: OpenRouter
+  permalink: /openrouter
+  description: OpenRouter — unified LLM gateway, multi-provider routing, and model marketplace
