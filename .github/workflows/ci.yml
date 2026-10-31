@@ -1,26 +1,35 @@
 name: CI
 
-# Build gate for PRs and pushes to main. This repo deploys manually to
-# gh-pages (see .opencode/skills/site-publish) — CI only proves the site
-# builds; it never publishes.
+# Build gate for PRs and pushes, plus auto-deploy to GitHub Pages.
+#
+# - pull_request  -> build only (never publishes; the deploy job is gated off).
+# - push (main|develop) or workflow_dispatch from main/develop -> build, then
+#   publish build/ to GitHub Pages via the official actions/deploy-pages flow.
+#
+# Deploy uses OIDC (pages: write + id-token: write) — no long-lived secret is
+# stored in the repo. The site's Pages source must be set to "GitHub Actions"
+# (build_type: workflow) for the deploy to take effect.
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
   workflow_dispatch:
 
+# Least privilege by default. The deploy job opts into pages/id-token write;
+# the build job inherits contents: read for checkout.
 permissions:
   contents: read
-
-concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Cancel a stale in-progress build when a newer commit lands on the same
+    # ref. Deploys are NOT cancelled — see the deploy job's own concurrency.
+    concurrency:
+      group: build-${{ github.ref }}
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
 
@@ -36,3 +45,34 @@ jobs:
       # `onBrokenLinks: throw` in docusaurus.config.js makes the build itself
       # the link check.
       - run: npm run build
+
+      # include-hidden-files: true keeps build/.nojekyll, which preserves
+      # parity with the previously deployed artifact (and would tell GitHub
+      # Pages to skip Jekyll if the source were ever switched back to a
+      # branch). upload-pages-artifact excludes dotfiles by default.
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: build
+          include-hidden-files: true
+
+  deploy:
+    # Publish only on push/dispatch to main or develop. PRs have a
+    # refs/pull/... ref, so they never satisfy this and never deploy.
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write      # create the Pages deployment
+      id-token: write   # OIDC provenance for the deployment
+    # Serialize deploys and never cancel one mid-publish, so an in-flight
+    # deployment is never left torn.
+    concurrency:
+      group: production-deploy
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
