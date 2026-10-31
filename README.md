@@ -34,13 +34,11 @@ Dev server with live reload:
 npm run start
 ```
 
-> **Heads up — `spawn yarn ENOENT` crash:** this repo tracks *both* `yarn.lock`
-> and `package-lock.json`. When a newer Docusaurus release exists, the CLI's
-> update notifier sees `yarn.lock` and shells out to `yarn --version` — which
-> crashes the whole CLI on machines without yarn installed.
-> **Fix:** prefix the command with `NO_UPDATE_NOTIFIER=1` (as shown above), or
-> install yarn once via `corepack enable`. npm works fine as the package
-> manager either way.
+> **Package manager: npm only.** This repo uses `package-lock.json` — there is
+> deliberately no `yarn.lock`. (Both used to be tracked, which made Docusaurus's
+> update notifier shell out to `yarn --version` and crash the CLI on machines
+> without yarn. `NO_UPDATE_NOTIFIER=1` is now optional — it only silences the
+> "update available" banner.)
 
 ## Project structure
 
