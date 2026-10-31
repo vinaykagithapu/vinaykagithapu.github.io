@@ -9,7 +9,7 @@ tags: [opencode, ai-agent, devops]
 **OpenCode** is an open-source AI coding agent that lives in your terminal. It reads your repository, edits files, runs commands, opens pull requests — and works with almost any model provider, so you're never locked into one vendor. But the difference between an AI agent that *demos well* and one you can **trust with real work** comes down to three things: repo-specific context, a verified workflow, and security discipline. This post is a practical guide to all three, and everything here applies to **any project** — a static site, a service, an infrastructure repo.
 
 :::info New to OpenCode?
-This is the skills deep dive. For the full picture — what OpenCode is, setup, core concepts, features, and use cases — start with the **[OpenCode Guide](/docs/opencode/what-is-opencode)**.
+This is the skills deep dive. For the full picture — what OpenCode is, setup, core concepts, features, and use cases — start with the **[OpenCode Guide](/docs/ai-tools/opencode/what-is-opencode)**.
 :::
 
 <!-- truncate -->
