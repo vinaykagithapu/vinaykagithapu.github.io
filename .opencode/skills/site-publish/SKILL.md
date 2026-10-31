@@ -56,8 +56,8 @@ Env-var gotchas (all verified the hard way):
 - **`GIT_USER_NAME` / `GIT_USER_EMAIL`** set the commit identity inside the
   temp gh-pages clone — repo-local `git config` does NOT reach it, and
   without them the commit dies with "Author identity unknown".
-- **`NO_UPDATE_NOTIFIER=1`** is still required (see the local-dev skill:
-  yarn.lock + missing yarn crashes the CLI otherwise).
+- **`NO_UPDATE_NOTIFIER=1`** is optional (silences the update banner); since
+  the repo went npm-only there is no yarn.lock for the notifier to trip on.
 - Deploy = fresh `docusaurus build` + clone gh-pages + force-push. Success
   ends with "Website is live at https://vinaykagithapu.github.io/."
 - **If `npm run deploy` hangs/times out** (happened once — no output for 10min,

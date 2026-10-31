@@ -1,6 +1,6 @@
 ---
 name: Docusaurus Local Dev
-description: Build, run, and preview this Docusaurus 3.9.2 portfolio site locally (npm install, build, serve/start, open browser), including the yarn update-notifier crash workaround
+description: Build, run, and preview this Docusaurus 3.9.2 portfolio site locally (npm install, build, serve/start, open browser)
 ---
 
 # Docusaurus Local Dev
@@ -36,14 +36,12 @@ opening the browser.
 
 ## Known gotchas (verified locally)
 
-- **`yarn --version` ENOENT crash**: the repo has both `package-lock.json`
-  and `yarn.lock`, but yarn may not be installed. When a newer Docusaurus
-  release exists, the CLI update notifier (`node_modules/@docusaurus/core/bin/beforeCli.mjs`)
-  sees `yarn.lock` and spawns `yarn --version`, which crashes the whole CLI
-  for `start`/`serve`/`build`. Fix: prefix commands with `NO_UPDATE_NOTIFIER=1`
-  (disables the notifier before it touches yarn.lock), or install yarn via
-  `corepack enable`. Do not delete `yarn.lock` — both lockfiles are tracked
-  and maintained in git.
+- **npm is the only package manager**: the repo tracks `package-lock.json`
+  only — `yarn.lock` was removed (branch `chore/npm-only-lockfile`) because
+  having both made the Docusaurus update notifier (`beforeCli.mjs`) spawn
+  `yarn --version` and crash `start`/`serve`/`build` on machines without
+  yarn. Plain `npm run build` works now; `NO_UPDATE_NOTIFIER=1` is optional
+  (just silences the update banner). Don't reintroduce a `yarn.lock`.
 - **`--host` takes a value**: `docusaurus serve --host --port 3000` parses
   `--port` as the host value and `3000` as the siteDir (ENOENT lstat '3000').
   Always pass `--host 0.0.0.0` (or omit `--host` entirely).
