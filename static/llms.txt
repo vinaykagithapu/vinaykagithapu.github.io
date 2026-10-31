@@ -19,12 +19,12 @@ This site is organized into three main areas:
 
 A six-part guide to OpenCode, the open-source AI coding agent, from zero to power user.
 
-- [What is OpenCode?](https://vinaykagithapu.github.io/docs/opencode/what-is-opencode/): Definitions, how it compares to chatbots and autocomplete, and who it's for.
-- [Why OpenCode?](https://vinaykagithapu.github.io/docs/opencode/why-opencode/): The problems it solves and how it compares to alternatives.
-- [Getting Started (Setup & Updates)](https://vinaykagithapu.github.io/docs/opencode/getting-started/): Installation, configuration, and keeping it up to date.
-- [Core Concepts](https://vinaykagithapu.github.io/docs/opencode/core-concepts/): Sessions, tools, skills, and the mental model behind the agent.
-- [Features Tour & What's New](https://vinaykagithapu.github.io/docs/opencode/features-tour/): A tour of current features and recent additions.
-- [Use Cases](https://vinaykagithapu.github.io/docs/opencode/use-cases/): Real-world workflows and when to reach for an agent.
+- [What is OpenCode?](https://vinaykagithapu.github.io/docs/ai-tools/opencode/what-is-opencode/): Definitions, how it compares to chatbots and autocomplete, and who it's for.
+- [Why OpenCode?](https://vinaykagithapu.github.io/docs/ai-tools/opencode/why-opencode/): The problems it solves and how it compares to alternatives.
+- [Getting Started (Setup & Updates)](https://vinaykagithapu.github.io/docs/ai-tools/opencode/getting-started/): Installation, configuration, and keeping it up to date.
+- [Core Concepts](https://vinaykagithapu.github.io/docs/ai-tools/opencode/core-concepts/): Sessions, tools, skills, and the mental model behind the agent.
+- [Features Tour & What's New](https://vinaykagithapu.github.io/docs/ai-tools/opencode/features-tour/): A tour of current features and recent additions.
+- [Use Cases](https://vinaykagithapu.github.io/docs/ai-tools/opencode/use-cases/): Real-world workflows and when to reach for an agent.
 
 ## MLOps
 

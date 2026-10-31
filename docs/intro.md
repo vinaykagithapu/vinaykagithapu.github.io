@@ -7,7 +7,7 @@ slug: /intro
 
 Welcome to my collection of tutorials and guides on **MLOps**, **DevOps**, **DevSecOps**, and **Security**. These tutorials are based on my hands-on experience building and managing cloud-native platforms.
 
-New here? Start with the **[OpenCode Guide](/docs/opencode/what-is-opencode)** — OpenCode (the open-source AI coding agent) from zero to power user: what it is, setup, core concepts, features, and use cases.
+New here? Start with the **[OpenCode Guide](/docs/ai-tools/opencode/what-is-opencode)** — OpenCode (the open-source AI coding agent) from zero to power user: what it is, setup, core concepts, features, and use cases.
 
 ## What You'll Find Here
 
@@ -22,6 +22,9 @@ Integrate security into your development lifecycle with secure coding practices,
 
 ### 🛡️ Security
 Deep dives into cloud security, container security, secrets management, and security best practices for production environments.
+
+### 🤖 AI Tools
+A practical guide to AI coding tools — OpenCode, Cursor, and Claude Code — and how to choose the right one for your workflow.
 
 ---
 
