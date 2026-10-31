@@ -33,8 +33,15 @@ const config = {
   ],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  // Explicit list instead of `v4: true`: since 3.10 that shorthand also turns
+  // on fasterByDefault (requires @docusaurus/faster), siteStorageNamespacing,
+  // and mdx1CompatDisabledByDefault — behavior changes taken separately.
+  // These two are exactly what `v4: true` enabled on 3.9.
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: true,
+    },
   },
 
   // Set the production url of your site here
