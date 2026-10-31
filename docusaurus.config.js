@@ -19,6 +19,19 @@ const config = {
   tagline: 'AI Infrastructure & Platform Engineer | LLM Systems | Kubernetes | DevSecOps',
   favicon: 'img/favicon.svg',
 
+  // Tell agents/LLMs where the curated markdown overview of this site lives.
+  // Spec: https://llmstxt.org — every page is covered by /llms.txt.
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'describedby',
+        type: 'text/plain',
+        href: '/llms.txt',
+      },
+    },
+  ],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -54,17 +67,20 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          //editUrl:
-          //  'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
+          editUrl:
+            'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
+          blogTitle: 'Blog — AI Infrastructure, Cloud Native & DevSecOps',
+          blogDescription:
+            'Articles by Vinay Kagithapu on LLM infrastructure, Kubernetes, MLOps, DevSecOps, the CNCF ecosystem, and practical AI agents.',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // editUrl:
-            // 'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
+          editUrl:
+            'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',

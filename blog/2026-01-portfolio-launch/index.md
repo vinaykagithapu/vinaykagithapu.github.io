@@ -1,6 +1,7 @@
 ---
 slug: portfolio-launch
 title: Why Every DevOps Engineer Needs a Portfolio Website
+description: Why a resume isn't enough for DevOps engineers — and how a portfolio website proves your skills with real, verifiable projects and writing.
 authors: [vinay]
 tags: [devops, portfolio, github-pages]
 unlisted: true

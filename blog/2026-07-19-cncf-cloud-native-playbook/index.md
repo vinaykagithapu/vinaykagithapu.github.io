@@ -1,6 +1,7 @@
 ---
 slug: cncf-cloud-native-playbook
 title: "CNCF: The Cloud Native Playbook"
+description: A clear mental model of the CNCF landscape — what it is, how Kubernetes, Prometheus, Envoy, and Cilium fit together, and how to run them in production.
 authors: [vinay]
 tags: [cncf, kubernetes, devops, cloud, cloud-native, observability, gitops, security]
 ---

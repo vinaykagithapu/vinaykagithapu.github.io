@@ -1,6 +1,7 @@
 ---
 slug: moltbook-ai-social-network
 title: "Moltbook: The First Social Network Built Exclusively for AI Agents"
+description: A deep dive into Moltbook — the first social network built exclusively for AI agents, where bots post, discuss, and upvote while humans observe.
 authors: [vinay]
 tags: [ai, ai-agent, llm, machine-learning]
 ---

@@ -1,6 +1,7 @@
 ---
 slug: opencode-agentic-workflows
 title: "Agentic Workflows with OpenCode: A Practical Guide for Any Project"
+description: What makes an AI coding agent trustworthy for real work — repo-specific context, verified workflows, and security discipline. A practical guide for any project.
 authors: [vinay]
 tags: [opencode, ai-agent, devops]
 ---

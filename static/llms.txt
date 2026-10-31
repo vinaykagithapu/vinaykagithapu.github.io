@@ -1,0 +1,75 @@
+# Vinay Kagithapu
+
+> Personal portfolio and technical blog of **Vinay Kagithapu**, an AI Infrastructure & Platform Engineer focused on LLM systems, Kubernetes, and DevSecOps. This site collects hands-on tutorials, long-form writing, and project write-ups.
+
+This site is organized into three main areas:
+
+- **Tutorials** — step-by-step guides on MLOps, DevOps, DevSecOps, Security, and a complete OpenCode guide, all written from production platform experience.
+- **Blog** — long-form articles on the AI ecosystem, CNCF/cloud-native stacks, and practical AI agents.
+- **Profile** — background, experience, technical focus areas, and selected projects.
+
+## Start here
+
+- [Tutorials home](https://vinaykagithapu.github.io/docs/intro/): Entry point to all tutorial tracks — MLOps, DevOps, DevSecOps, Security, and OpenCode.
+- [Blog index](https://vinaykagithapu.github.io/blog/): All articles, newest first, with tags and RSS/Atom feeds.
+- [About](https://vinaykagithapu.github.io/about/): Bio, current role, previous experience, and technical focus areas.
+- [Projects](https://vinaykagithapu.github.io/projects/): Selected hands-on work with tech stacks and highlights.
+
+## OpenCode Guide
+
+A six-part guide to OpenCode, the open-source AI coding agent, from zero to power user.
+
+- [What is OpenCode?](https://vinaykagithapu.github.io/docs/opencode/what-is-opencode/): Definitions, how it compares to chatbots and autocomplete, and who it's for.
+- [Why OpenCode?](https://vinaykagithapu.github.io/docs/opencode/why-opencode/): The problems it solves and how it compares to alternatives.
+- [Getting Started (Setup & Updates)](https://vinaykagithapu.github.io/docs/opencode/getting-started/): Installation, configuration, and keeping it up to date.
+- [Core Concepts](https://vinaykagithapu.github.io/docs/opencode/core-concepts/): Sessions, tools, skills, and the mental model behind the agent.
+- [Features Tour & What's New](https://vinaykagithapu.github.io/docs/opencode/features-tour/): A tour of current features and recent additions.
+- [Use Cases](https://vinaykagithapu.github.io/docs/opencode/use-cases/): Real-world workflows and when to reach for an agent.
+
+## MLOps
+
+- [MLOps category](https://vinaykagithapu.github.io/docs/category/mlops/): Overview of the MLOps track.
+- [MLOps Fundamentals](https://vinaykagithapu.github.io/docs/category/mlops-fundamentals/): Core concepts, roles, lifecycle, and architecture.
+- [Getting Started with MLOps](https://vinaykagithapu.github.io/docs/mlops/mlops-fundamentals/getting-started/): What MLOps is and why it matters.
+- [Building an ML Engineering Team](https://vinaykagithapu.github.io/docs/mlops/mlops-fundamentals/building-ml-team/): Staffing and structuring an ML team.
+- [The MLOps Engineer Role](https://vinaykagithapu.github.io/docs/mlops/mlops-fundamentals/mlops-engineer-role/): Responsibilities and skill set of the MLOps engineer.
+- [The MLOps Lifecycle](https://vinaykagithapu.github.io/docs/mlops/mlops-fundamentals/mlops-lifecycle/): Stages from data to deployment and monitoring.
+- [CI, CD, CT, and CM in MLOps](https://vinaykagithapu.github.io/docs/mlops/mlops-fundamentals/ci-cd-ct-cm/): Continuous integration, delivery, training, and model management.
+- [Essential Tools for MLOps](https://vinaykagithapu.github.io/docs/mlops/mlops-fundamentals/mlops-tools/): The tooling landscape.
+- [MLOps High-Level Architecture](https://vinaykagithapu.github.io/docs/mlops/mlops-fundamentals/mlops-architecture/): Reference architecture for ML platforms.
+- [Data Preparation](https://vinaykagithapu.github.io/docs/category/data-preparation/): Ingestion, storage, cleaning, and orchestration of data for ML.
+- [Data Ingestion and ETL](https://vinaykagithapu.github.io/docs/mlops/data-preparation/data-ingestion-etl/): Getting data into pipelines reliably.
+- [Data Lakes](https://vinaykagithapu.github.io/docs/mlops/data-preparation/data-lakes/): Storing raw data at scale.
+- [Data Cleaning and Transformation](https://vinaykagithapu.github.io/docs/mlops/data-preparation/data-cleaning-transformation/): Preparing data for modeling.
+- [Streaming Datasets](https://vinaykagithapu.github.io/docs/mlops/data-preparation/streaming-datasets/): Working with continuously arriving data.
+- [Feature Stores](https://vinaykagithapu.github.io/docs/mlops/data-preparation/feature-stores/): Managing and serving features consistently.
+- [Data Pipeline Orchestration](https://vinaykagithapu.github.io/docs/mlops/data-preparation/data-pipeline-orchestration/): Scheduling and coordinating pipelines.
+
+## DevOps, DevSecOps & Security
+
+- [DevOps category](https://vinaykagithapu.github.io/docs/category/devops/): CI/CD, infrastructure as code, Docker, and Kubernetes.
+- [Getting Started with DevOps](https://vinaykagithapu.github.io/docs/devops/getting-started/): Foundational DevOps practices.
+- [DevSecOps category](https://vinaykagithapu.github.io/docs/category/devsecops/): Integrating security into the development lifecycle.
+- [Getting Started with DevSecOps](https://vinaykagithapu.github.io/docs/devsecops/getting-started/): Secure coding and security automation basics.
+- [Security category](https://vinaykagithapu.github.io/docs/category/security/): Cloud, container, and application security deep dives.
+- [Getting Started with Security](https://vinaykagithapu.github.io/docs/security/getting-started/): Core security concepts and best practices.
+
+## Blog
+
+- [Agentic Workflows with OpenCode](https://vinaykagithapu.github.io/blog/opencode-agentic-workflows/): Repo-specific context, verified workflows, and security discipline for AI coding agents.
+- [Understanding the AI Ecosystem](https://vinaykagithapu.github.io/blog/ai-ecosystem-explained/): LLMs, agents, skills, tools, MCP, and agentic AI explained in plain English.
+- [CNCF: The Cloud Native Playbook](https://vinaykagithapu.github.io/blog/cncf-cloud-native-playbook/): A mental model of the CNCF landscape and production cloud-native stacks.
+- [Moltbook: A Social Network for AI Agents](https://vinaykagithapu.github.io/blog/moltbook-ai-social-network/): A deep dive into a social network built exclusively for AI agents.
+- [Clawdbot (OpenClaw): Personal AI Assistant](https://vinaykagithapu.github.io/blog/clawdbot-ai-agent/): Understanding, deploying, and using an AI assistant that executes real tasks.
+- [Building an AI-Powered Sentiment Analysis Web App](https://vinaykagithapu.github.io/blog/sentiment-analysis-app/): A real-time sentiment analysis app with HuggingFace, FastAPI, and Streamlit.
+- [Blog archive](https://vinaykagithapu.github.io/blog/archive/): Chronological list of every post.
+- [Blog tags](https://vinaykagithapu.github.io/blog/tags/): Browse posts by topic.
+
+## Feeds & metadata
+
+- [RSS feed](https://vinaykagithapu.github.io/blog/rss.xml): Subscribe to new posts via RSS.
+- [Atom feed](https://vinaykagithapu.github.io/blog/atom.xml): Subscribe to new posts via Atom.
+- [Sitemap](https://vinaykagithapu.github.io/sitemap.xml): Full list of indexable pages.
+- [robots.txt](https://vinaykagithapu.github.io/robots.txt): Crawl rules for automated agents.
+- [GitHub](https://github.com/vinaykagithapu): Source code and repositories.
+- [LinkedIn](https://linkedin.com/in/vinaykagithapu): Professional profile.

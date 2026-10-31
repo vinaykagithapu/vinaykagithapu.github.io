@@ -51,6 +51,6 @@ I'm fascinated by systems thinking — understanding how software and hardware c
 
 ## Let's Connect
 
-- 📧 [Email](mailto:vinaykagithapu94@gmail.com)
-- 💼 [LinkedIn](https://linkedin.com/in/vinaykagithapu)
-- 🐙 [GitHub](https://github.com/vinaykagithapu)
+- [Email](mailto:vinaykagithapu94@gmail.com)
+- [LinkedIn](https://linkedin.com/in/vinaykagithapu)
+- [GitHub](https://github.com/vinaykagithapu)

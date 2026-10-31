@@ -38,8 +38,29 @@ function TechRow() {
   );
 }
 
-function HomepageHeader() {
+function HeroTagline() {
   const {siteConfig} = useDocusaurusContext();
+  const segments = siteConfig.tagline
+    .split('|')
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return (
+    <p className={styles.heroSubtitle}>
+      {segments.map((segment, i) => (
+        <span key={segment} className={styles.subtitleSegment}>
+          {i > 0 && (
+            <span className={styles.subtitleDot} aria-hidden="true">
+              •
+            </span>
+          )}
+          {segment}
+        </span>
+      ))}
+    </p>
+  );
+}
+
+function HomepageHeader() {
   return (
     <header className={styles.heroBanner}>
       <div className={styles.heroMesh} aria-hidden="true" />
@@ -59,7 +80,7 @@ function HomepageHeader() {
             <Heading as="h1" className={styles.heroTitle}>
               Vinay <span className="site-gradient-text">Kagithapu</span>
             </Heading>
-            <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
+            <HeroTagline />
             <TechRow />
             <div className={styles.buttons}>
               <Link className="button button--primary button--lg" to="/projects">
