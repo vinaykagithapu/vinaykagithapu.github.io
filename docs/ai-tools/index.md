@@ -21,9 +21,9 @@ AI coding tools have moved from autocomplete to **autonomous agents** that can r
 
 **OpenCode** is a free, open-source AI coding agent that runs in your terminal. It's the tool I reach for when I need an agent that can plan, edit files across the repo, run builds and tests, open PRs, and hand me a reviewable diff — without vendor lock-in.
 
-- **Why OpenCode?** → [Why OpenCode?](/docs/opencode/why-opencode)
-- **Install & first session** → [Getting started](/docs/opencode/getting-started)
-- **Full OpenCode guide** → [OpenCode docs](/docs/opencode/what-is-opencode)
+- **Why OpenCode?** → [Why OpenCode?](/docs/ai-tools/opencode/why-opencode)
+- **Install & first session** → [Getting started](/docs/ai-tools/opencode/getting-started)
+- **Full OpenCode guide** → [OpenCode docs](/docs/ai-tools/opencode/what-is-opencode)
 
 OpenCode turns your terminal into a workshop where AI does the labor and you make the calls.
 
@@ -55,4 +55,4 @@ All three can write, edit, and run code. OpenCode is the only one that's fully o
 
 --- 
 
-> **Next:** Pick a tool above, or dive into the full [OpenCode guide](/docs/opencode/what-is-opencode).
+> **Next:** Pick a tool above, or dive into the full [OpenCode guide](/docs/ai-tools/opencode/what-is-opencode).

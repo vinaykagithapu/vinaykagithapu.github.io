@@ -48,12 +48,12 @@ You can drag-and-drop screenshots into the prompt, undo any change with `/undo`,
 
 This page is a summary. For the complete walkthrough — what OpenCode is, why it exists, setup, core concepts, features tour, and use cases — see the dedicated OpenCode docs:
 
-- [What is OpenCode?](/docs/opencode/what-is-opencode)
-- [Why OpenCode?](/docs/opencode/why-opencode)
-- [Getting started](/docs/opencode/getting-started)
-- [Core concepts](/docs/opencode/core-concepts)
-- [Features tour](/docs/opencode/features-tour)
-- [Use cases](/docs/opencode/use-cases)
+- [What is OpenCode?](/docs/ai-tools/opencode/what-is-opencode)
+- [Why OpenCode?](/docs/ai-tools/opencode/why-opencode)
+- [Getting started](/docs/ai-tools/opencode/getting-started)
+- [Core concepts](/docs/ai-tools/opencode/core-concepts)
+- [Features tour](/docs/ai-tools/opencode/features-tour)
+- [Use cases](/docs/ai-tools/opencode/use-cases)
 
 ---
 

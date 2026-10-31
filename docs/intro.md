@@ -7,7 +7,7 @@ slug: /intro
 
 Welcome to my collection of tutorials and guides on **MLOps**, **DevOps**, **DevSecOps**, and **Security**. These tutorials are based on my hands-on experience building and managing cloud-native platforms.
 
-New here? Start with the **[OpenCode Guide](/docs/opencode/what-is-opencode)** — OpenCode (the open-source AI coding agent) from zero to power user: what it is, setup, core concepts, features, and use cases.
+New here? Start with the **[OpenCode Guide](/docs/ai-tools/opencode/what-is-opencode)** — OpenCode (the open-source AI coding agent) from zero to power user: what it is, setup, core concepts, features, and use cases.
 
 ## What You'll Find Here
 
