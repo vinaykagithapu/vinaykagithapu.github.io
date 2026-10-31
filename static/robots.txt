@@ -6,3 +6,5 @@ Allow: /
 
 # Sitemap
 Sitemap: https://vinaykagithapu.github.io/sitemap.xml
+
+# LLM-friendly overview (https://llmstxt.org) — see also /llms.txt

@@ -19,6 +19,19 @@ const config = {
   tagline: 'AI Infrastructure & Platform Engineer | LLM Systems | Kubernetes | DevSecOps',
   favicon: 'img/favicon.svg',
 
+  // Tell agents/LLMs where the curated markdown overview of this site lives.
+  // Spec: https://llmstxt.org — every page is covered by /llms.txt.
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'describedby',
+        type: 'text/plain',
+        href: '/llms.txt',
+      },
+    },
+  ],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
