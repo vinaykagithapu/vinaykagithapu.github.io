@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[1672],{3024(a){a.exports=JSON.parse('{"authors":[{"name":"Vinay Kagithapu","title":"AI Infrastructure & Platform Engineer","url":"https://github.com/vinaykagithapu","imageURL":"https://github.com/vinaykagithapu.png","key":"vinay","page":null,"count":7}]}')}}]);

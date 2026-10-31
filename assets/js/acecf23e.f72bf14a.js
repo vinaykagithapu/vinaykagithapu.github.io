@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvinay_portfolio=globalThis.webpackChunkvinay_portfolio||[]).push([[1903],{1912(o){o.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog \u2014 AI Infrastructure, Cloud Native & DevSecOps","authorsListPath":"/blog/authors"}')}}]);
