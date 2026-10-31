@@ -23,6 +23,9 @@ Integrate security into your development lifecycle with secure coding practices,
 ### 🛡️ Security
 Deep dives into cloud security, container security, secrets management, and security best practices for production environments.
 
+### 🤖 AI Tools
+A practical guide to AI coding tools — OpenCode, Cursor, and Claude Code — and how to choose the right one for your workflow.
+
 ---
 
 ## Getting Started
