@@ -31,9 +31,23 @@ const ProjectList = [
     ],
     repo: 'https://github.com/vinaykagithapu/sentiment-analysis-app',
   },
+  {
+    title: 'Tutorials & Writing',
+    description:
+      'In-depth tutorial series on MLOps, DevOps, DevSecOps, and Security — plus a complete OpenCode guide — all written from hands-on platform experience.',
+    tech: ['MLOps', 'DevOps', 'DevSecOps', 'Security', 'OpenCode'],
+    features: [
+      'OpenCode Guide: what → setup → concepts → features → use cases',
+      'MLOps series: fundamentals, data prep, feature stores, orchestration',
+      'DevOps / DevSecOps / Security getting-started tracks',
+      'RSS + Atom feeds — subscribe and never miss a post',
+    ],
+    to: '/docs/intro',
+    linkLabel: 'Browse ↗',
+  },
 ];
 
-function ProjectCard({title, description, tech, features, repo}) {
+function ProjectCard({title, description, tech, features, repo, to, linkLabel}) {
   return (
     <article className={styles.card}>
       <div className={styles.cardTop}>
@@ -42,9 +56,13 @@ function ProjectCard({title, description, tech, features, repo}) {
         </Heading>
         <Link
           className={styles.repoLink}
-          to={repo}
-          aria-label={`${title} GitHub repository`}>
-          GitHub ↗
+          to={repo ?? to}
+          aria-label={
+            repo
+              ? `${title} GitHub repository`
+              : `${title} — ${linkLabel.replace(' ↗', '')}`
+          }>
+          {repo ? 'GitHub ↗' : linkLabel}
         </Link>
       </div>
       <p className={styles.cardDescription}>{description}</p>

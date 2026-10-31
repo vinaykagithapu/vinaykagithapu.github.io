@@ -1,6 +1,7 @@
 ---
 slug: ai-ecosystem-explained
 title: "Understanding the AI Ecosystem: LLMs, Agents, Skills, Tools & Agentic AI"
+description: LLMs, agents, skills, tools, MCP, memory, workflows — the AI jargon explained in plain English with simple pictures, and how it all fits together.
 authors: [vinay]
 tags: [ai, ai-agent, llm, machine-learning, mcp]
 ---

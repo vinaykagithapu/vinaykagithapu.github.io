@@ -54,17 +54,20 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          //editUrl:
-          //  'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
+          editUrl:
+            'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
+          blogTitle: 'Blog — AI Infrastructure, Cloud Native & DevSecOps',
+          blogDescription:
+            'Articles by Vinay Kagithapu on LLM infrastructure, Kubernetes, MLOps, DevSecOps, the CNCF ecosystem, and practical AI agents.',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // editUrl:
-            // 'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
+          editUrl:
+            'https://github.com/vinaykagithapu/vinaykagithapu.github.io/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',

@@ -1,0 +1,8 @@
+# robots.txt — vinaykagithapu.github.io
+# https://vinaykagithapu.github.io/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vinaykagithapu.github.io/sitemap.xml

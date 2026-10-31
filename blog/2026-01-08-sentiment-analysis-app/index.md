@@ -1,6 +1,7 @@
 ---
 slug: sentiment-analysis-app
 title: Building an AI-Powered Sentiment Analysis Web App
+description: Building a real-time sentiment analysis web app with HuggingFace Transformers, FastAPI, and Streamlit — from model selection to confidence scores and deployment.
 authors: [vinay]
 tags: [ai, nlp, python, fastapi, huggingface, machine-learning, kubernetes]
 ---

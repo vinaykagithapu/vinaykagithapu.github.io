@@ -1,6 +1,7 @@
 ---
 slug: clawdbot-ai-agent
 title: "Clawdbot (OpenClaw): Personal AI Assistant That Actually Does Things"
+description: A comprehensive guide to Clawdbot (OpenClaw) — the open-source AI assistant that executes real tasks on your computer. Architecture, deployment, and real usage.
 authors: [vinay]
 tags: [ai, ai-agent, chatbot, llm, conversational-ai, nlp, python, machine-learning]
 ---

@@ -172,6 +172,23 @@
   font-size: 1.15rem;
   color: var(--ifm-color-content-secondary);
   margin-bottom: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15rem 0.5rem;
+}
+
+.subtitleSegment {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.subtitleDot {
+  color: #22d3ee;
+  font-size: 0.65rem;
+  line-height: 1;
 }
 
 .techRow {
