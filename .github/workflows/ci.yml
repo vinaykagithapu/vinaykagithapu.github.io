@@ -1,0 +1,38 @@
+name: CI
+
+# Build gate for PRs and pushes to main. This repo deploys manually to
+# gh-pages (see .opencode/skills/site-publish) — CI only proves the site
+# builds; it never publishes.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # npm ci fails if package.json and package-lock.json are out of sync,
+      # so this also guards against hand-edited lockfiles.
+      - run: npm ci
+
+      # `onBrokenLinks: throw` in docusaurus.config.js makes the build itself
+      # the link check.
+      - run: npm run build
