@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 slug: /ai-tools/cursor
 title: Cursor
 description: Cursor — AI-native code editor for in-editor AI chat, autocomplete, and multi-file edits.

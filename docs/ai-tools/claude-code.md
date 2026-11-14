@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 slug: /ai-tools/claude-code
 title: Claude Code
 description: Claude Code — Anthropic's terminal-native coding agent powered by Claude models.

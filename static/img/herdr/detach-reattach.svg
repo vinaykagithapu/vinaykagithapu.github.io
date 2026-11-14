@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="title desc">
+  <title id="title">Detach and reattach in Herdr without stopping agents</title>
+  <desc id="desc">An animated loop: a client is attached to the Herdr server while two agents work. The client detaches with ctrl+b q and the agents keep working in the server. Then a new client attaches with herdr and finds the same layout, processes, and conversation.</desc>
+  <defs>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e5e7eb; }
+      .title { font-size: 21px; font-weight: 700; fill: #f8fafc; }
+      .sub { font-size: 13.5px; fill: #94a3b8; }
+      .label { font-size: 14px; font-weight: 600; fill: #cbd5e1; }
+      .mono { font-size: 12.5px; fill: #cbd5e1; }
+      .small { font-size: 12.5px; fill: #94a3b8; }
+      .tiny { font-size: 11.5px; fill: #64748b; }
+      .client { animation: clientState 12s ease-in-out infinite; }
+      .link-up { animation: linkAttached 12s ease-in-out infinite; }
+      .link-down { animation: linkLost 12s ease-in-out infinite; }
+      .phase1 { animation: phase1 12s ease-in-out infinite; }
+      .phase2 { animation: phase2 12s ease-in-out infinite; }
+      .phase3 { animation: phase3 12s ease-in-out infinite; }
+      .pulse { animation: pulse 1.6s ease-in-out infinite; }
+      .blink { animation: blink 1s steps(1) infinite; }
+      @keyframes clientState {
+        0%, 22% { opacity: 1; }
+        30%, 60% { opacity: .16; }
+        68%, 100% { opacity: 1; }
+      }
+      @keyframes linkAttached {
+        0%, 24% { opacity: 1; }
+        32%, 58% { opacity: 0; }
+        66%, 100% { opacity: 1; }
+      }
+      @keyframes linkLost {
+        0%, 26% { opacity: 0; }
+        34%, 56% { opacity: 1; }
+        64%, 100% { opacity: 0; }
+      }
+      @keyframes phase1 {
+        0%, 20% { opacity: 1; }
+        26%, 100% { opacity: .25; }
+      }
+      @keyframes phase2 {
+        0%, 26% { opacity: .25; }
+        34%, 58% { opacity: 1; }
+        64%, 100% { opacity: .25; }
+      }
+      @keyframes phase3 {
+        0%, 62% { opacity: .25; }
+        70%, 100% { opacity: 1; }
+      }
+      @keyframes pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="400" rx="16" fill="#0b1020" stroke="#1e293b"/>
+  <text x="32" y="40" class="title">Detach without stopping the work</text>
+  <text x="32" y="62" class="sub">Closing the terminal — or losing SSH — only closes the client. Processes keep running in the server.</text>
+
+  <!-- Client -->
+  <g class="client">
+    <rect x="32" y="100" width="210" height="216" rx="12" fill="#101728" stroke="#22304a"/>
+    <text x="48" y="126" class="label">client</text>
+    <rect x="48" y="140" width="178" height="150" rx="8" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="60" y="166" class="mono">$ herdr</text>
+    <text x="60" y="188" class="tiny">attached</text>
+    <text x="60" y="208" class="tiny">2 agents live</text>
+    <text x="60" y="228" class="tiny">layout + scrollback</text>
+    <rect x="60" y="244" width="8" height="12" class="blink" fill="#34d399"/>
+  </g>
+
+  <!-- Links -->
+  <line x1="246" y1="208" x2="316" y2="208" stroke="#34d399" stroke-width="2.5" class="link-up"/>
+  <line x1="246" y1="208" x2="316" y2="208" stroke="#f87171" stroke-width="2.5" stroke-dasharray="6 6" class="link-down"/>
+
+  <text x="281" y="190" class="tiny phase1" text-anchor="middle" fill="#34d399">attached</text>
+  <text x="281" y="190" class="tiny phase2" text-anchor="middle" fill="#f87171">detached</text>
+  <text x="281" y="190" class="tiny phase3" text-anchor="middle" fill="#34d399">reattached</text>
+
+  <!-- Server -->
+  <rect x="316" y="84" width="392" height="248" rx="12" fill="#0f1626" stroke="#24405c" stroke-width="2"/>
+  <text x="334" y="112" class="label" fill="#7dd3fc">herdr server · still running</text>
+  <text x="334" y="130" class="tiny">panes, shells, agents, and dev servers never stopped</text>
+
+  <rect x="334" y="146" width="172" height="150" rx="8" fill="#0a0f1c" stroke="#1e2940"/>
+  <text x="346" y="170" class="mono">claude</text>
+  <rect x="346" y="180" width="64" height="18" rx="9" fill="#3b2a12" stroke="#a16207"/>
+  <text x="378" y="193" class="tiny" text-anchor="middle" fill="#fbbf24">working</text>
+  <text x="346" y="220" class="tiny">refactor: 12 files</text>
+  <circle cx="352" cy="240" r="4" fill="#fbbf24" class="pulse"/>
+  <text x="364" y="244" class="tiny">still editing…</text>
+  <text x="346" y="270" class="tiny" fill="#34d399">process alive</text>
+
+  <rect x="520" y="146" width="170" height="150" rx="8" fill="#0a0f1c" stroke="#1e2940"/>
+  <text x="532" y="170" class="mono">shell · tests</text>
+  <rect x="532" y="180" width="52" height="18" rx="9" fill="#0f2438" stroke="#1d4ed8"/>
+  <text x="558" y="193" class="tiny" text-anchor="middle" fill="#60a5fa">shell</text>
+  <text x="532" y="220" class="tiny" fill="#34d399">✓ 214 passed</text>
+  <text x="532" y="240" class="tiny">watching for changes</text>
+  <circle cx="538" cy="262" r="4" fill="#34d399" class="pulse"/>
+  <text x="550" y="266" class="tiny">still running…</text>
+
+  <text x="334" y="316" class="tiny" fill="#94a3b8">closing a terminal is not a stop signal</text>
+
+  <!-- Phase rail -->
+  <g class="phase1">
+    <rect x="742" y="112" width="186" height="56" rx="8" fill="#0d1f1a" stroke="#15803d"/>
+    <text x="756" y="134" class="small" fill="#86efac">1 · herdr</text>
+    <text x="756" y="152" class="tiny">attach or resume</text>
+  </g>
+  <g class="phase2">
+    <rect x="742" y="188" width="186" height="56" rx="8" fill="#221012" stroke="#b91c1c"/>
+    <text x="756" y="210" class="small" fill="#fca5a5">2 · ctrl+b q</text>
+    <text x="756" y="228" class="tiny">panes keep running</text>
+  </g>
+  <g class="phase3">
+    <rect x="742" y="264" width="186" height="56" rx="8" fill="#0d1f1a" stroke="#15803d"/>
+    <text x="756" y="286" class="small" fill="#86efac">3 · herdr</text>
+    <text x="756" y="304" class="tiny">same conversation</text>
+  </g>
+
+  <text x="480" y="372" class="tiny" text-anchor="middle" fill="#94a3b8">Detach is not stop. Use <tspan fill="#e5e7eb">herdr server stop</tspan> when you actually want everything to end.</text>
+</svg>

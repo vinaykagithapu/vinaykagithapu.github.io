@@ -4,13 +4,13 @@
 
 This site is organized into three main areas:
 
-- **Tutorials** — step-by-step guides on MLOps, DevOps, DevSecOps, Security, and a complete OpenCode guide, all written from production platform experience.
+- **Tutorials** — step-by-step guides on MLOps, DevOps, DevSecOps, Security, and complete AI-tools guides for OpenCode and Herdr, all written from production platform experience.
 - **Blog** — long-form articles on the AI ecosystem, CNCF/cloud-native stacks, and practical AI agents.
 - **Profile** — background, experience, technical focus areas, and selected projects.
 
 ## Start here
 
-- [Tutorials home](https://vinaykagithapu.github.io/docs/intro/): Entry point to all tutorial tracks — MLOps, DevOps, DevSecOps, Security, and OpenCode.
+- [Tutorials home](https://vinaykagithapu.github.io/docs/intro/): Entry point to all tutorial tracks — MLOps, DevOps, DevSecOps, Security, and AI Tools.
 - [Blog index](https://vinaykagithapu.github.io/blog/): All articles, newest first, with tags and RSS/Atom feeds.
 - [About](https://vinaykagithapu.github.io/about/): Bio, current role, previous experience, and technical focus areas.
 - [Projects](https://vinaykagithapu.github.io/projects/): Selected hands-on work with tech stacks and highlights.
@@ -25,6 +25,20 @@ A six-part guide to OpenCode, the open-source AI coding agent, from zero to powe
 - [Core Concepts](https://vinaykagithapu.github.io/docs/ai-tools/opencode/core-concepts/): Sessions, tools, skills, and the mental model behind the agent.
 - [Features Tour & What's New](https://vinaykagithapu.github.io/docs/ai-tools/opencode/features-tour/): A tour of current features and recent additions.
 - [Use Cases](https://vinaykagithapu.github.io/docs/ai-tools/opencode/use-cases/): Real-world workflows and when to reach for an agent.
+
+## Herdr Guide
+
+An eight-part guide to Herdr, the open-source terminal workspace manager for AI coding agents.
+
+- [Herdr overview](https://vinaykagithapu.github.io/docs/ai-tools/herdr/): What Herdr is and where it fits in an agent workflow.
+- [What is Herdr?](https://vinaykagithapu.github.io/docs/ai-tools/herdr/what-is-herdr/): The multiplexer model, agent awareness, and what it is not.
+- [Why Herdr?](https://vinaykagithapu.github.io/docs/ai-tools/herdr/why-herdr/): Problems it solves, comparisons with tmux and IDE terminals, and when to skip it.
+- [Getting Started](https://vinaykagithapu.github.io/docs/ai-tools/herdr/getting-started/): Install, first session, agent integrations, and updates.
+- [Core Concepts](https://vinaykagithapu.github.io/docs/ai-tools/herdr/core-concepts/): Sessions, workspaces, tabs, panes, agents, modes, and state.
+- [End-to-End Walkthrough](https://vinaykagithapu.github.io/docs/ai-tools/herdr/workflow-walkthrough/): Run parallel agents with worktrees, dev servers, and a review loop.
+- [Features Tour](https://vinaykagithapu.github.io/docs/ai-tools/herdr/features-tour/): Worktrees, remote machines, plugins, CLI/socket API, and configuration.
+- [Use Cases](https://vinaykagithapu.github.io/docs/ai-tools/herdr/use-cases/): Eight practical patterns for parallel and remote agent work.
+- [Troubleshooting](https://vinaykagithapu.github.io/docs/ai-tools/herdr/troubleshooting/): Agent detection, keybindings, session restore, remote auth, and logs.
 
 ## MLOps
 
