@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">DeepSeek Harness: agent = model + harness</title>
+  <desc id="desc">An animated diagram. A model box on the left feeds a harness ring made of plugin chips — model adapter, tools, prompt assembly, agent loop, session log, sandbox, orchestration, and UI. The chips light up in sequence, showing that every part of the harness is a replaceable plugin.</desc>
+  <defs>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e5e7eb; }
+      .title { font-size: 21px; font-weight: 700; fill: #f8fafc; }
+      .sub { font-size: 13.5px; fill: #94a3b8; }
+      .label { font-size: 14px; font-weight: 600; fill: #cbd5e1; }
+      .small { font-size: 12.5px; fill: #94a3b8; }
+      .tiny { font-size: 11.5px; fill: #64748b; }
+      .chip { font-size: 12px; font-weight: 600; fill: #dbeafe; }
+      .flow { stroke-dasharray: 6 6; animation: dash 1.2s linear infinite; }
+      .ring { stroke-dasharray: 3 9; animation: spin 30s linear infinite; transform-origin: 700px 272px; }
+      .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8 { animation: glow 4.8s ease-in-out infinite; }
+      .c1 { animation-delay: 0s; }
+      .c2 { animation-delay: .6s; }
+      .c3 { animation-delay: 1.2s; }
+      .c4 { animation-delay: 1.8s; }
+      .c5 { animation-delay: 2.4s; }
+      .c6 { animation-delay: 3s; }
+      .c7 { animation-delay: 3.6s; }
+      .c8 { animation-delay: 4.2s; }
+      @keyframes dash { to { stroke-dashoffset: -24; } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes glow {
+        0%, 70%, 100% { opacity: .45; }
+        12% { opacity: 1; }
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="520" rx="16" fill="#0b1020" stroke="#1e293b"/>
+  <text x="32" y="40" class="title">Agent = Model + Harness</text>
+  <text x="32" y="62" class="sub">The model supplies reasoning. The harness supplies tools, context and control.</text>
+
+  <!-- Model -->
+  <rect x="40" y="104" width="246" height="300" rx="12" fill="#101728" stroke="#22304a"/>
+  <text x="58" y="132" class="label" fill="#a5b4fc">model</text>
+  <text x="58" y="150" class="tiny">any supported provider</text>
+  <text x="58" y="176" class="small" fill="#c7d2fe">DeepSeek V4</text>
+  <text x="58" y="198" class="small" fill="#c7d2fe">Claude / GPT / Gemini</text>
+  <text x="58" y="220" class="small" fill="#c7d2fe">Bedrock · Azure</text>
+  <text x="58" y="242" class="small" fill="#c7d2fe">OpenAI-compatible gateway</text>
+  <rect x="58" y="266" width="212" height="74" rx="8" fill="#0a0f1c" stroke="#1e2940"/>
+  <text x="70" y="286" class="tiny">a model only emits text —</text>
+  <text x="70" y="303" class="tiny">no files, no shell,</text>
+  <text x="70" y="320" class="tiny">no tests, no tools.</text>
+  <text x="58" y="362" class="tiny">swap it, keep the harness</text>
+  <text x="58" y="386" class="tiny" fill="#34d399">the adapter row does this</text>
+
+  <line x1="294" y1="272" x2="470" y2="272" stroke="#34d399" stroke-width="2.2" class="flow" marker-end="url(#arrow)"/>
+  <text x="382" y="256" class="tiny" text-anchor="middle" fill="#34d399">route</text>
+
+  <!-- Harness ring -->
+  <circle cx="700" cy="272" r="148" fill="none" stroke="#24405c" stroke-width="1.5" class="ring"/>
+  <circle cx="700" cy="272" r="62" fill="#0f1a2e" stroke="#2dd4bf" stroke-width="1.6"/>
+  <text x="700" y="266" class="label" text-anchor="middle" fill="#5eead4">HARNESS</text>
+  <text x="700" y="286" class="tiny" text-anchor="middle">plugin tree</text>
+
+  <!-- Chips around the ring -->
+  <g class="c1">
+    <rect x="634" y="99" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="700" y="125" class="chip" text-anchor="middle" fill="#bae6fd">model adapter</text>
+  </g>
+  <g class="c2">
+    <rect x="734" y="171" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="800" y="197" class="chip" text-anchor="middle" fill="#bae6fd">tools</text>
+  </g>
+  <g class="c3">
+    <rect x="789" y="251" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="855" y="277" class="chip" text-anchor="middle" fill="#bae6fd">prompt</text>
+  </g>
+  <g class="c4">
+    <rect x="734" y="331" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="800" y="357" class="chip" text-anchor="middle" fill="#bae6fd">sandbox</text>
+  </g>
+  <g class="c5">
+    <rect x="634" y="403" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="700" y="429" class="chip" text-anchor="middle" fill="#bae6fd">agent loop</text>
+  </g>
+  <g class="c6">
+    <rect x="534" y="331" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="600" y="357" class="chip" text-anchor="middle" fill="#bae6fd">session log</text>
+  </g>
+  <g class="c7">
+    <rect x="479" y="251" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="545" y="277" class="chip" text-anchor="middle" fill="#bae6fd">orchestration</text>
+  </g>
+  <g class="c8">
+    <rect x="534" y="171" width="132" height="42" rx="10" fill="#102033" stroke="#38bdf8"/>
+    <text x="600" y="197" class="chip" text-anchor="middle" fill="#bae6fd">UI / SDK</text>
+  </g>
+
+  <!-- Formula -->
+  <rect x="40" y="452" width="920" height="50" rx="10" fill="#0f1a2e" stroke="#1e3350"/>
+  <text x="60" y="484" class="label" fill="#e2e8f0">agent</text>
+  <text x="150" y="484" class="small" fill="#64748b">=</text>
+  <text x="180" y="484" class="label" fill="#a5b4fc">model</text>
+  <text x="270" y="484" class="small" fill="#64748b">+</text>
+  <text x="300" y="484" class="label" fill="#5eead4">harness</text>
+  <text x="410" y="484" class="tiny">each chip is a plugin: mount it, replace it, or remove it</text>
+</svg>

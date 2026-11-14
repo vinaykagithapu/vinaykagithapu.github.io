@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Four agent presets in DeepSeek Harness</title>
+  <desc id="desc">An animated 2x2 diagram of the standard, ptc, minimal, and cordis agent presets, showing each one's tools, loop shape, and best use. Cards highlight in sequence to show that a preset is selected per session and recorded in the session log.</desc>
+  <defs>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e5e7eb; }
+      .title { font-size: 21px; font-weight: 700; fill: #f8fafc; }
+      .sub { font-size: 13.5px; fill: #94a3b8; }
+      .name { font-size: 15px; font-weight: 700; fill: #f8fafc; }
+      .tag { font-size: 11.5px; fill: #94a3b8; }
+      .small { font-size: 12px; fill: #94a3b8; }
+      .tiny { font-size: 11px; fill: #64748b; }
+      .h1,.h2,.h3,.h4 { animation: hl 6s ease-in-out infinite; }
+      .h1 { animation-delay: 0s; }
+      .h2 { animation-delay: 1.5s; }
+      .h3 { animation-delay: 3s; }
+      .h4 { animation-delay: 4.5s; }
+      @keyframes hl {
+        0%, 100% { opacity: .35; }
+        12% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="520" rx="16" fill="#0b1020" stroke="#1e293b"/>
+  <text x="32" y="40" class="title">Four presets, one runtime</text>
+  <text x="32" y="62" class="sub">A preset decides the agent's tools, prompt, and loop shape. It is chosen per session and recorded in the log.</text>
+
+  <!-- standard -->
+  <rect x="40" y="96" width="440" height="176" rx="12" fill="#101728" stroke="#334155"/>
+  <g class="h1">
+    <rect x="40" y="96" width="440" height="176" rx="12" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  </g>
+  <text x="62" y="124" class="name">standard</text>
+  <rect x="152" y="106" width="86" height="22" rx="11" fill="#0f2438" stroke="#1d4ed8"/>
+  <text x="195" y="121" class="tiny" text-anchor="middle" fill="#93c5fd">default</text>
+  <text x="62" y="150" class="small">files · shell · web search</text>
+  <text x="62" y="170" class="small">subagents · teams · schedules</text>
+  <text x="62" y="190" class="small">plans · goals · MCP</text>
+  <text x="62" y="222" class="tag" fill="#5eead4">loop: full agent loop with approvals</text>
+  <text x="62" y="246" class="tiny">use for everyday coding and document work</text>
+
+  <!-- ptc -->
+  <rect x="520" y="96" width="440" height="176" rx="12" fill="#101728" stroke="#334155"/>
+  <g class="h2">
+    <rect x="520" y="96" width="440" height="176" rx="12" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  </g>
+  <text x="542" y="124" class="name">ptc</text>
+  <rect x="592" y="106" width="126" height="22" rx="11" fill="#241a3d" stroke="#7c3aed"/>
+  <text x="655" y="121" class="tiny" text-anchor="middle" fill="#c4b5fd">code mode</text>
+  <text x="542" y="150" class="small">one tool: run_code</text>
+  <text x="542" y="170" class="small">generated TypeScript SDK</text>
+  <text x="542" y="190" class="small">same guarded tool pipeline</text>
+  <text x="542" y="222" class="tag" fill="#c4b5fd">loop: several tool calls per program</text>
+  <text x="542" y="246" class="tiny">use when round trips and token cost hurt</text>
+
+  <!-- minimal -->
+  <rect x="40" y="292" width="440" height="176" rx="12" fill="#101728" stroke="#334155"/>
+  <g class="h3">
+    <rect x="40" y="292" width="440" height="176" rx="12" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  </g>
+  <text x="62" y="320" class="name">minimal</text>
+  <rect x="148" y="302" width="118" height="22" rx="11" fill="#3b2a12" stroke="#a16207"/>
+  <text x="207" y="317" class="tiny" text-anchor="middle" fill="#fbbf24">benchmark loop</text>
+  <text x="62" y="346" class="small">bash</text>
+  <text x="62" y="366" class="small">str_replace_editor</text>
+  <text x="62" y="386" class="small">nothing else</text>
+  <text x="62" y="418" class="tag" fill="#fcd34d">loop: leanest context, fewest tools</text>
+  <text x="62" y="442" class="tiny">use to measure the model, not the harness</text>
+
+  <!-- cordis -->
+  <rect x="520" y="292" width="440" height="176" rx="12" fill="#101728" stroke="#334155"/>
+  <g class="h4">
+    <rect x="520" y="292" width="440" height="176" rx="12" fill="none" stroke="#2dd4bf" stroke-width="2"/>
+  </g>
+  <text x="542" y="320" class="name">cordis</text>
+  <rect x="622" y="302" width="120" height="22" rx="11" fill="#0f2b2a" stroke="#0f766e"/>
+  <text x="682" y="317" class="tiny" text-anchor="middle" fill="#5eead4">creator</text>
+  <text x="542" y="346" class="small">standard tools +</text>
+  <text x="542" y="366" class="small">read-only runtime inspection</text>
+  <text x="542" y="386" class="small">plugin authoring · indexes</text>
+  <text x="542" y="418" class="tag" fill="#5eead4">loop: full loop, plus introspection</text>
+  <text x="542" y="442" class="tiny">use when you are building the harness itself</text>
+</svg>

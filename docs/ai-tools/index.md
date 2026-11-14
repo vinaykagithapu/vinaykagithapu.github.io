@@ -2,7 +2,7 @@
 sidebar_position: 1
 slug: /ai-tools
 title: AI Tools
-description: A curated guide to AI coding tools — OpenCode, Herdr, Cursor, Claude Code, and how to choose the right one for your workflow.
+description: A curated guide to AI coding tools — OpenCode, Herdr, DeepSeek Harness, Cursor, Claude Code, and how to choose the right one for your workflow.
 ---
 
 # AI Tools
@@ -15,6 +15,7 @@ AI coding tools have moved from autocomplete to **autonomous agents** that can r
 |------|------|----------|-------------|--------|
 | **OpenCode** | Terminal coding agent | Complex multi-file changes, builds, tests, deploys | ✅ | Any (Anthropic, OpenAI, Google, OpenRouter, local…) |
 | **Herdr** | Agent workspace manager | Running several agents in parallel, durable sessions, SSH/remote work | ✅ | N/A — it hosts any agent |
+| **DeepSeek Harness** | Agent harness / runtime | Swappable models and tools, auditable runs, CI and SDK automation | ✅ | DeepSeek, Anthropic, OpenAI, Gemini, any compatible gateway |
 | **Cursor** | AI code editor | In-editor AI chat, autocomplete, multi-file edits | ❌ | Claude, GPT-4, etc. |
 | **Claude Code** | Terminal coding agent | Terminal-native agentic coding with Claude | ❌ | Claude (Anthropic) |
 
@@ -36,6 +37,15 @@ OpenCode turns your terminal into a workshop where AI does the labor and you mak
 - **Install & first session** → [Getting started](/docs/ai-tools/herdr/getting-started)
 - **Run agents in parallel** → [End-to-end walkthrough](/docs/ai-tools/herdr/workflow-walkthrough)
 - **Full Herdr guide** → [Herdr docs](/docs/ai-tools/herdr)
+
+## DeepSeek Harness
+
+**DeepSeek Harness** (`dsh`) is DeepSeek's open-source (MIT) **agent harness** — the runtime around a model. Its rule is literal: *everything is a plugin*, including the model adapter, the tool registry, the session log, the sandbox, and the agent loop itself. You run it as a desktop app, a local web UI, a headless CI command, or from Python, and you can point it at DeepSeek or any compatible gateway.
+
+- **What it is** → [What is DeepSeek Harness?](/docs/ai-tools/deepseek-harness/what-is-dsh)
+- **Install & first task** → [Getting started](/docs/ai-tools/deepseek-harness/getting-started)
+- **Fix a repo end to end** → [Walkthrough](/docs/ai-tools/deepseek-harness/workflow-walkthrough)
+- **Full DeepSeek Harness guide** → [DeepSeek Harness docs](/docs/ai-tools/deepseek-harness)
 
 ## Cursor
 
@@ -59,11 +69,12 @@ OpenCode turns your terminal into a workshop where AI does the labor and you mak
 |--------------|------------|
 | Open source, any model, full repo agency | **OpenCode** |
 | Several agents at once, durable sessions, remote/SSH work | **Herdr** |
+| A swappable model/tool/loop runtime with auditable runs and CI automation | **DeepSeek Harness** |
 | AI inside a visual IDE/editor | **Cursor** |
 | A terminal agent powered by Claude | **Claude Code** |
 
-OpenCode, Cursor, and Claude Code all write, edit, and run code. OpenCode is the fully open-source, model-agnostic one — the default recommendation on this site. Herdr is the complement: put OpenCode, Claude Code, and Codex side by side in one persistent, agent-aware workspace.
+OpenCode, Cursor, and Claude Code all write, edit, and run code. OpenCode is the fully open-source, model-agnostic one — the default recommendation on this site. Herdr is the complement: put OpenCode, Claude Code, and Codex side by side in one persistent, agent-aware workspace. DeepSeek Harness goes one level deeper: it exposes the harness itself, so you can change the tools, the loop, the log, and the sandbox without forking anything.
 
 ---
 
-> **Next:** Pick a tool above, or dive into the full [OpenCode guide](/docs/ai-tools/opencode/what-is-opencode) or the [Herdr guide](/docs/ai-tools/herdr).
+> **Next:** Pick a tool above, or dive into the full [OpenCode guide](/docs/ai-tools/opencode/what-is-opencode), the [Herdr guide](/docs/ai-tools/herdr), or the [DeepSeek Harness guide](/docs/ai-tools/deepseek-harness).
