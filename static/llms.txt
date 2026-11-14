@@ -4,7 +4,7 @@
 
 This site is organized into three main areas:
 
-- **Tutorials** — step-by-step guides on MLOps, DevOps, DevSecOps, Security, and complete AI-tools guides for OpenCode and Herdr, all written from production platform experience.
+- **Tutorials** — step-by-step guides on MLOps, DevOps, DevSecOps, Security, and complete AI-tools guides for OpenCode, Herdr, and DeepSeek Harness, all written from production platform experience.
 - **Blog** — long-form articles on the AI ecosystem, CNCF/cloud-native stacks, and practical AI agents.
 - **Profile** — background, experience, technical focus areas, and selected projects.
 
@@ -39,6 +39,21 @@ An eight-part guide to Herdr, the open-source terminal workspace manager for AI 
 - [Features Tour](https://vinaykagithapu.github.io/docs/ai-tools/herdr/features-tour/): Worktrees, remote machines, plugins, CLI/socket API, and configuration.
 - [Use Cases](https://vinaykagithapu.github.io/docs/ai-tools/herdr/use-cases/): Eight practical patterns for parallel and remote agent work.
 - [Troubleshooting](https://vinaykagithapu.github.io/docs/ai-tools/herdr/troubleshooting/): Agent detection, keybindings, session restore, remote auth, and logs.
+
+## DeepSeek Harness Guide
+
+A nine-part guide to DeepSeek Harness (`dsh`), DeepSeek's open-source agent harness where everything — models, tools, the session log, the sandbox, and even the agent loop — is a plugin.
+
+- [DeepSeek Harness overview](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/): What `dsh` is and where it fits in an agent workflow.
+- [What is DeepSeek Harness?](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/what-is-dsh/): The model/harness split, the plugin architecture, and what it is not.
+- [Why DeepSeek Harness?](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/why-dsh/): Problems it solves, honest trade-offs, and comparisons with Claude Code, Codex, OpenCode, and Cursor.
+- [Getting Started](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/getting-started/): Install via npm or desktop, add a model key, choose a workspace, pin versions, isolate a run.
+- [Core Concepts](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/core-concepts/): Profiles, bundles, patches, workspaces, sessions, turns, presets, tools, permissions, and the session log.
+- [End-to-End Walkthrough](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/workflow-walkthrough/): Take a failing repository from "map it" to a verified fix, then reuse it headlessly.
+- [Modes and Plugins](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/modes-and-plugins/): Standard, PTC, Minimal, and Creator presets; plugin management, indexes, MCP, skills, and hooks.
+- [Automation and SDKs](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/automation-and-sdk/): Headless CI with JSON events, Python and TypeScript SDKs, ACP, schedules, webhooks, and reverse proxies.
+- [Use Cases](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/use-cases/): Eight practical patterns, from repo triage to plugin products.
+- [Troubleshooting](https://vinaykagithapu.github.io/docs/ai-tools/deepseek-harness/troubleshooting/): Install, model, workspace, sandbox, plugin, and upgrade failures.
 
 ## MLOps
 

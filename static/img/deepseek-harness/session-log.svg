@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">The append-only session log and its projections</title>
+  <desc id="desc">An animated diagram: session events append to a log on the left — turn start, system and user messages, request headers, tool calls and results, assistant messages — while four projections on the right, resume, fork, replay, and trajectory or search, all read that same stream.</desc>
+  <defs>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e5e7eb; }
+      .title { font-size: 21px; font-weight: 700; fill: #f8fafc; }
+      .sub { font-size: 13.5px; fill: #94a3b8; }
+      .label { font-size: 13.5px; font-weight: 700; fill: #f1f5f9; }
+      .small { font-size: 12px; fill: #94a3b8; }
+      .tiny { font-size: 11.5px; fill: #64748b; }
+      .ev { font-size: 11.5px; fill: #cbd5e1; }
+      .flow { stroke-dasharray: 5 7; animation: dash 1.6s linear infinite; }
+      .e1,.e2,.e3,.e4,.e5,.e6,.e7 { animation: append 5.6s ease-in-out infinite; }
+      .e1 { animation-delay: 0s; }
+      .e2 { animation-delay: .5s; }
+      .e3 { animation-delay: 1s; }
+      .e4 { animation-delay: 1.5s; }
+      .e5 { animation-delay: 2s; }
+      .e6 { animation-delay: 2.5s; }
+      .e7 { animation-delay: 3s; }
+      .k1,.k2,.k3,.k4 { animation: read 5.6s ease-in-out infinite; }
+      .k1 { animation-delay: 2.6s; }
+      .k2 { animation-delay: 3.2s; }
+      .k3 { animation-delay: 3.8s; }
+      .k4 { animation-delay: 4.4s; }
+      .blink { animation: blink 1s steps(1) infinite; }
+      @keyframes dash { to { stroke-dashoffset: -24; } }
+      @keyframes append {
+        0%, 100% { opacity: .4; }
+        15% { opacity: 1; }
+      }
+      @keyframes read {
+        0%, 100% { opacity: .5; }
+        20% { opacity: 1; }
+      }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="520" rx="16" fill="#0b1020" stroke="#1e293b"/>
+  <text x="32" y="40" class="title">One log, many views</text>
+  <text x="32" y="62" class="sub">Every prompt, reasoning block, tool call, and result is appended. Features are projections, not side channels.</text>
+
+  <!-- Log -->
+  <rect x="40" y="96" width="392" height="380" rx="12" fill="#0c1526" stroke="#24405c" stroke-width="1.6"/>
+  <text x="60" y="124" class="label" fill="#7dd3fc">session log</text>
+  <text x="60" y="142" class="tiny">append-only · no rewrites</text>
+
+  <g class="e1">
+    <rect x="60" y="158" width="352" height="30" rx="6" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="72" y="178" class="ev">turn/start</text>
+    <text x="398" y="178" class="tiny" text-anchor="end">#1</text>
+  </g>
+  <g class="e2">
+    <rect x="60" y="194" width="352" height="30" rx="6" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="72" y="214" class="ev">system/message</text>
+    <text x="398" y="214" class="tiny" text-anchor="end">#2</text>
+  </g>
+  <g class="e3">
+    <rect x="60" y="230" width="352" height="30" rx="6" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="72" y="250" class="ev">user/message</text>
+    <text x="398" y="250" class="tiny" text-anchor="end">#3</text>
+  </g>
+  <g class="e4">
+    <rect x="60" y="266" width="352" height="30" rx="6" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="72" y="286" class="ev">request/header + context</text>
+    <text x="398" y="286" class="tiny" text-anchor="end">#4</text>
+  </g>
+  <g class="e5">
+    <rect x="60" y="302" width="352" height="30" rx="6" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="72" y="322" class="ev">tool/call · bash</text>
+    <text x="398" y="322" class="tiny" text-anchor="end">#5</text>
+  </g>
+  <g class="e6">
+    <rect x="60" y="338" width="352" height="30" rx="6" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="72" y="358" class="ev">tool/result · exit 0</text>
+    <text x="398" y="358" class="tiny" text-anchor="end">#6</text>
+  </g>
+  <g class="e7">
+    <rect x="60" y="374" width="352" height="30" rx="6" fill="#0a0f1c" stroke="#1e2940"/>
+    <text x="72" y="394" class="ev">assistant/message</text>
+    <text x="398" y="394" class="tiny" text-anchor="end">#7</text>
+  </g>
+
+  <rect x="60" y="418" width="352" height="34" rx="8" fill="#0f1a2e" stroke="#1e3350"/>
+  <text x="72" y="440" class="tiny" fill="#5eead4">next event</text>
+  <rect x="150" y="430" width="9" height="12" class="blink" fill="#5eead4"/>
+  <text x="398" y="440" class="tiny" text-anchor="end" fill="#475569">durable</text>
+
+  <!-- Projections -->
+  <g class="k1">
+    <rect x="556" y="104" width="404" height="74" rx="10" fill="#101728" stroke="#38bdf8"/>
+    <text x="574" y="130" class="label" fill="#bae6fd">resume</text>
+    <text x="574" y="150" class="small">reopen the exact session, model selection included</text>
+    <text x="574" y="168" class="tiny">works after a restart, a crash, or a different surface</text>
+  </g>
+  <g class="k2">
+    <rect x="556" y="190" width="404" height="74" rx="10" fill="#101728" stroke="#38bdf8"/>
+    <text x="574" y="216" class="label" fill="#bae6fd">fork</text>
+    <text x="574" y="236" class="small">branch the conversation without rewriting history</text>
+    <text x="574" y="254" class="tiny">try a second approach and compare outcomes</text>
+  </g>
+  <g class="k3">
+    <rect x="556" y="276" width="404" height="74" rx="10" fill="#101728" stroke="#38bdf8"/>
+    <text x="574" y="302" class="label" fill="#bae6fd">replay</text>
+    <text x="574" y="322" class="small">reconstruct exactly what the model saw at each step</text>
+    <text x="574" y="340" class="tiny">the honest answer to “why did it do that?”</text>
+  </g>
+  <g class="k4">
+    <rect x="556" y="362" width="404" height="74" rx="10" fill="#101728" stroke="#38bdf8"/>
+    <text x="574" y="388" class="label" fill="#bae6fd">trajectory · search · stats</text>
+    <text x="574" y="408" class="small">nested tool activity, timing, tokens, transcripts</text>
+    <text x="574" y="426" class="tiny">40 steps for a one-line fix is a signal, not a flex</text>
+  </g>
+
+  <!-- Fan out -->
+  <line x1="436" y1="250" x2="548" y2="141" stroke="#38bdf8" stroke-width="1.8" class="flow" marker-end="url(#arrow)"/>
+  <line x1="436" y1="256" x2="548" y2="227" stroke="#38bdf8" stroke-width="1.8" class="flow" marker-end="url(#arrow)"/>
+  <line x1="436" y1="262" x2="548" y2="313" stroke="#38bdf8" stroke-width="1.8" class="flow" marker-end="url(#arrow)"/>
+  <line x1="436" y1="268" x2="548" y2="399" stroke="#38bdf8" stroke-width="1.8" class="flow" marker-end="url(#arrow)"/>
+</svg>
