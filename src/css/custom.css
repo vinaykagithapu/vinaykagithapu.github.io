@@ -115,10 +115,30 @@ a {
 /* ------------------------------------------------------------------ */
 /* Navbar — frosted glass                                              */
 /* ------------------------------------------------------------------ */
+/* The frosted glass lives on a pseudo-element, not on .navbar itself: a
+   backdrop-filter (or filter) on .navbar makes it a containing block, which
+   traps the fixed-position mobile drawer inside the 4rem navbar — the menu
+   then renders 64px tall and invisible. */
 .navbar {
+  background-color: transparent;
+  box-shadow: 0 1px 0 rgba(100, 116, 139, 0.15);
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--ifm-navbar-background-color);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
-  box-shadow: 0 1px 0 rgba(100, 116, 139, 0.15);
+  pointer-events: none;
+}
+
+/* The drawer is a fixed panel over the page: use the solid page color so the
+   translucent navbar tint does not let article text show through it. */
+.navbar-sidebar {
+  background-color: var(--ifm-background-color);
 }
 
 .navbar__title {
