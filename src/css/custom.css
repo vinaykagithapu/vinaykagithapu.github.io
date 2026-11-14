@@ -476,3 +476,182 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--ifm-color-content-muted);
 }
+
+/* ------------------------------------------------------------------ */
+/* Page hero — shared by Projects, Blog and the Tutorials hub          */
+/* ------------------------------------------------------------------ */
+.site-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 3rem 2.5rem 2.75rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: calc(var(--ifm-card-border-radius) + 4px);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--site-card-shadow);
+}
+
+.site-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(34rem 18rem at 8% -20%, rgba(34, 211, 238, 0.16), transparent 62%),
+    radial-gradient(30rem 16rem at 92% -10%, rgba(99, 102, 241, 0.18), transparent 62%);
+}
+
+.site-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--ifm-color-emphasis-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ifm-color-emphasis-200) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse 70% 90% at 20% 0%, black 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 90% at 20% 0%, black 10%, transparent 70%);
+  opacity: 0.28;
+}
+
+.site-hero > * {
+  position: relative;
+  animation: siteFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.site-hero > *:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.site-hero > *:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.site-hero > *:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.site-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  background: var(--site-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-hero .site-hero-title {
+  margin: 0 0 0.7rem;
+  font-size: 2.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.site-hero-lead {
+  max-width: 44rem;
+  margin: 0 0 1.4rem;
+  color: var(--ifm-color-content-secondary);
+  font-size: 1.05rem;
+}
+
+.site-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.site-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.5rem;
+}
+
+.site-hero-chip {
+  padding: 0.24rem 0.7rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-content-secondary);
+  font-family: var(--ifm-font-family-code);
+  font-size: 0.76rem;
+  font-weight: 500;
+}
+
+@keyframes siteFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .site-hero {
+    padding: 2rem 1.4rem 2.1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .site-hero .site-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .site-hero-lead {
+    font-size: 0.98rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-hero > * {
+    animation: none;
+  }
+}
+
+/* Docs hub hero sits inside the article column, so it is a little tighter. */
+.site-hero--docs {
+  margin-top: 0.5rem;
+  padding: 2.4rem 2rem 2.2rem;
+}
+
+.track-grid--animated > * {
+  animation: siteFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.track-grid--animated > *:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.track-grid--animated > *:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+.track-grid--animated > *:nth-child(4) {
+  animation-delay: 0.18s;
+}
+
+.track-grid--animated > *:nth-child(5) {
+  animation-delay: 0.24s;
+}
+
+@media screen and (max-width: 576px) {
+  .site-hero--docs {
+    padding: 1.8rem 1.25rem 1.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track-grid--animated > * {
+    animation: none;
+  }
+}

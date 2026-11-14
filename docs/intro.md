@@ -1,17 +1,39 @@
 ---
 sidebar_position: 1
 slug: /intro
+sidebar_label: Welcome to My Tutorials
+title: Welcome to My Tutorials
+hide_title: true
 ---
 
-# Welcome to My Tutorials
+<div className="site-hero site-hero--docs">
 
-Welcome to my collection of tutorials and guides on **MLOps**, **DevOps**, **DevSecOps**, and **Security**. These tutorials are based on my hands-on experience building and managing cloud-native platforms.
+<p className="site-eyebrow">Tutorials</p>
+
+<h1 className="site-hero-title">Welcome to My <span className="site-gradient-text">Tutorials</span></h1>
+
+<p className="site-hero-lead">Tutorials and guides on <strong>MLOps</strong>, <strong>DevOps</strong>, <strong>DevSecOps</strong>, and <strong>Security</strong> — based on hands-on experience building and managing cloud-native platforms.</p>
+
+<div className="site-hero-chips" aria-label="Tracks">
+  <span className="site-hero-chip">MLOps</span>
+  <span className="site-hero-chip">DevOps</span>
+  <span className="site-hero-chip">DevSecOps</span>
+  <span className="site-hero-chip">Security</span>
+  <span className="site-hero-chip">AI Tools</span>
+</div>
+
+<div className="site-hero-actions">
+  <a className="button button--primary button--lg" href="/docs/ai-tools/opencode/what-is-opencode">Start with OpenCode</a>
+  <a className="button button--secondary button--lg" href="/docs/category/mlops/">Explore the tracks</a>
+</div>
+
+</div>
 
 New here? Start with the **[OpenCode Guide](/docs/ai-tools/opencode/what-is-opencode)** — OpenCode (the open-source AI coding agent) from zero to power user — then the **[Herdr Guide](/docs/ai-tools/herdr)** for running several agents in parallel without losing a session, and the **[DeepSeek Harness Guide](/docs/ai-tools/deepseek-harness)** for an agent runtime you can take apart and rebuild.
 
 ## What You'll Find Here
 
-<div className="track-grid">
+<div className="track-grid track-grid--animated">
   <a className="track-card" href="/docs/category/mlops/">
     <span className="track-icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">

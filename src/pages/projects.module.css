@@ -1,32 +1,23 @@
 .wrapper {
-  max-width: 56rem;
-  padding: 3rem 1.25rem 4.5rem;
-}
-
-.header {
-  margin-bottom: 2.25rem;
-}
-
-.pageTitle {
-  font-size: 2.4rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.pageSubtitle {
-  color: var(--ifm-color-content-secondary);
-  font-size: 1.1rem;
-  margin-bottom: 0;
+  max-width: 76rem;
+  padding: 2.5rem 1.25rem 4.5rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
+}
+
+.cardWrap {
+  display: flex;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding: 1.75rem;
   border-radius: var(--ifm-card-border-radius);
   border: 1px solid var(--ifm-color-emphasis-200);
@@ -36,7 +27,7 @@
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--site-card-shadow-hover);
   border-color: var(--ifm-color-primary-darkest);
 }
@@ -83,6 +74,12 @@
   background: var(--site-gradient-soft);
   color: var(--ifm-color-content-secondary);
   font-family: var(--ifm-font-family-code);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.techChip:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
 }
 
 .featureList {
