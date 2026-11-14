@@ -1,8 +1,8 @@
-import {useEffect, useRef} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import Reveal from '@site/src/components/Reveal';
 
 import styles from './styles.module.css';
 import profilePhoto from '../pp2.png';
@@ -147,49 +147,6 @@ const SOCIALS = [
   {label: 'LinkedIn', href: 'https://linkedin.com/in/vinaykagithapu', icon: 'linkedin'},
   {label: 'GitHub', href: 'https://github.com/vinaykagithapu', icon: 'github'},
 ];
-
-/**
- * Reveals children once they scroll into view. Falls back to visible when
- * IntersectionObserver is missing or the visitor prefers reduced motion.
- */
-function Reveal({children, delay = 0, className, as: Tag = 'div'}) {
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return undefined;
-
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced || typeof IntersectionObserver === 'undefined') {
-      el.classList.add(styles.visible);
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            el.classList.add(styles.visible);
-            observer.disconnect();
-          }
-        }
-      },
-      {rootMargin: '0px 0px -8% 0px', threshold: 0.12},
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <Tag
-      ref={ref}
-      className={clsx(styles.reveal, className)}
-      style={{transitionDelay: `${delay}ms`}}>
-      {children}
-    </Tag>
-  );
-}
 
 function SectionHeading({eyebrow, title}) {
   return (

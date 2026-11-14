@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
+import Reveal from '@site/src/components/Reveal';
 import styles from './projects.module.css';
 
 const ProjectList = [
@@ -88,17 +89,43 @@ export default function Projects() {
       title="Projects"
       description="Projects by Vinay Kagithapu — LLM infrastructure, Kubernetes, and DevSecOps work">
       <main className={clsx('container', styles.wrapper)}>
-        <header className={styles.header}>
-          <Heading as="h1" className={styles.pageTitle}>
-            Projects
+        <header className="site-hero">
+          <p className="site-eyebrow">Projects</p>
+          <Heading as="h1" className="site-hero-title">
+            Things I&apos;ve <span className="site-gradient-text">built</span>
           </Heading>
-          <p className={styles.pageSubtitle}>
-            Hands-on work across LLM infrastructure, machine learning, and cloud-native platforms.
+          <p className="site-hero-lead">
+            Hands-on work across LLM infrastructure, machine learning, and
+            cloud-native platforms — with the guides and repositories that go
+            with it.
           </p>
+          <div className="site-hero-chips" aria-label="Focus areas">
+            {['LLM Inference', 'Kubernetes', 'DevSecOps', 'Observability', 'Writing'].map((chip) => (
+              <span key={chip} className="site-hero-chip">
+                {chip}
+              </span>
+            ))}
+          </div>
+          <div className="site-hero-actions">
+            <Link className="button button--primary button--lg" to="/docs/intro">
+              Browse tutorials
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
+              href="https://github.com/vinaykagithapu">
+              GitHub profile
+            </Link>
+          </div>
         </header>
+
         <div className={styles.grid}>
-          {ProjectList.map((p) => (
-            <ProjectCard key={p.title} {...p} />
+          {ProjectList.map((project, index) => (
+            <Reveal
+              key={project.title}
+              delay={index * 80}
+              className={styles.cardWrap}>
+              <ProjectCard {...project} />
+            </Reveal>
           ))}
         </div>
       </main>
