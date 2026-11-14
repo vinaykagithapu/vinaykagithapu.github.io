@@ -145,7 +145,7 @@ OpenRouter proxies requests and works with providers to avoid logging prompts/co
 
 - **Hosted MCP server** (`https://mcp.openrouter.ai/mcp`, OAuth) — agents can discover and compare models programmatically
 - **[Rankings](https://openrouter.ai/rankings)** — leaderboards by *real* token usage, not vendor benchmarks; useful signal when choosing a model
-- **Per-model `llms.txt`** — `openrouter.ai/{author}/{model}/llms.txt` returns one markdown doc with price, context length, and supported APIs. Machine-readable model cards — the same idea as this site's own [`llms.txt`](/llms.txt)
+- **Per-model `llms.txt`** — `openrouter.ai/{author}/{model}/llms.txt` returns one markdown doc with price, context length, and supported APIs. Machine-readable model cards — the same idea as this site's own <a href="/llms.txt" target="_blank" rel="noopener"><code>llms.txt</code></a>
 - **Batch variants** (`:batch`) for discounted offline workloads
 - **Generation stats API** — query cost and token counts by response `id` for chargeback-grade accounting
 

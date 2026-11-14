@@ -13,11 +13,11 @@ Six words and the whole model clicks: **session → workspace → tab → pane �
 ## The mental model
 
 ```mermaid
-flowchart TD
-    S["Session — persistent background server"] --> W["Workspace — one per repo, task, or investigation"]
-    W --> T["Tab — a layout: agents / logs / server / review"]
-    T --> P["Pane — a real terminal, split right or down"]
-    P --> A["Agent — a recognized process: working · blocked · done · idle"]
+flowchart LR
+    S["session<br/>background server"] --> W["workspace<br/>one per repo / task"]
+    W --> T["tab<br/>a layout"]
+    T --> P["pane<br/>a real terminal"]
+    P --> A["agent<br/>working · blocked · done · idle"]
 ```
 
 Everything above the pane is organization. The pane is the only thing the process knows about — which is why an agent inside it behaves exactly as it would in any terminal.

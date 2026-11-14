@@ -13,13 +13,10 @@ Nine words explain most of `dsh`: **profile**, **bundle**, **patch**, **plugin**
 A running `dsh` is a **plugin tree composed at boot** from ordered layers.
 
 ```mermaid
-graph TD
-  A["Empty tree"] --> B["Bundle 1<br/>@deepseek-ai/dsh-base"]
-  B --> C["Bundle 2<br/>@deepseek-ai/dsh-web-app"]
-  C --> D["Profile patch<br/>profiles/web/cordis.patch.yml"]
-  D --> E["Home patch"]
-  E --> F["--patch overlays<br/>repeatable"]
-  F --> G["Booted runtime"]
+flowchart LR
+  B["bundles<br/>dsh-base + dsh-web-app"] --> P["profile patch<br/>cordis.patch.yml"]
+  P --> H["home patch<br/>+ --patch overlays"]
+  H --> R["booted<br/>plugin tree"]
 ```
 
 | Term | Meaning |

@@ -35,6 +35,9 @@
         0%, 54% { opacity: 0; }
         62%, 100% { opacity: 1; }
       }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
     </style>
   </defs>
 
